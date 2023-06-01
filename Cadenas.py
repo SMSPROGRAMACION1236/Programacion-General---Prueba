@@ -24,4 +24,4 @@ carlos"""
 #print(nombre.lower())
 
 #print(nombre.replace("S" , "H"))
-print(nombre.format(edad))
+#print(nombre.format(edad))
