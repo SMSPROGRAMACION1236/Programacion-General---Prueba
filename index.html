@@ -2,32 +2,32 @@
 <html>
 <head>
     <title>Mi primera web</title>
-    <style> 
+    <style>     
     table, th, td {
-        border: 1px solid blue;
+        border: 1px solid blue;     
 
 
     }
-    </style>
+    </style> <!--   Lo que esta arriva, es la decoracion de la tabla, usando un poco de CSS, primeramente poniendo que quiero que cambie de color, y eligiendo el color -->
 </head>
 <body>
-    <table style="width:500px;" >
+    <table style="width:500px;" >  <!-- Tamaño de la tabla-->
         <thead>
         <tr>
-            <th>Productos</th>
+            <th>Productos</th>           <!-- Hice una tabla th significa que esta fijado, es decir lo que esta de ahi es lo principal-->
             <th>Precios</th>
         </tr>
         </thead> 
         <tbody>
             <tr>
-                <td>Hola beats</td>
+                <td>Hola beats</td>    <!-- Lo que estara aqui es lo que estara de bajo de th, es decir td es un sub de th   -->
                 <td>Gratis</td>
             </tr>
             <tr>
                 <td>Empanada</td>
                 <td>5 mil </td>
                 <tr>
-                    <td>Manzana</td>
+                    <td>Manzana</td>   <!-- Es un sub otra vez,que quiere decir que estara debajo de td-->
                     <td>10 mil</td>
             </tr>
      
@@ -35,7 +35,7 @@
         <tfoot>
 
             <td></td>
-            <td>Total 65 mil</td>
+            <td>Total 65 mil</td> 
         </tfoot>
        
     </table>
@@ -49,13 +49,13 @@
     </ul>
     <!-- ol es lista ordenada -->
     <ol>
-        <li value="50">Elemento 1</li>
+        <li value="50">Elemento 1</li>  <!-- Le agregue una lista, se usa li, para nombrar una lista -->
         <li>Elemento 2</li>
         <li>Elemento 3</li>
         <li>Elemento 4</li>
         <li>
             <ol>
-                <li style="list-style-type: lower-roman;">sub elemento 1</li>
+                <li style="list-style-type: lower-roman;">sub elemento 1</li> <!-- le agregue unas sublistas y algunas propiedades-->
                 <li style="list-style-type: lower-roman;">sub elemento 2</li>
                 <li style="list-style-type: lower-roman;">sub elemento 3</li>
             </ol>
@@ -65,7 +65,7 @@
 
     <form action="/formulario" method="POST">
         <label for="nombre">Nombre</label>
-        <input value="Santiago" type="text" id="nombre" name="lala" placeholder="Todo bien" />
+        <input value="Santiago" type="text" id="nombre" name="lala" placeholder="Todo bien" /> <!-- Le agregue unos que otros formularios: Comentario, Nombre, Apellido, y Algunos botones -->
         <br>
         <label for="apellido">Apellido</label>
         <input value="Sanabria" type="text" id="apellido" name="apellido" placeholder="Todo mal" />
@@ -77,7 +77,7 @@
         <button type="reset">Tipo reset</button>
         <button type="submit">Tipo submit</button>
     </form>
-    <h1>Mi primer heading</h1>
+    <h1>Mi primer heading</h1>    <!-- Poniendo los diferentes tamaños -->
     <h2>Mi segundo heading</h2>
     <h3>Mi tercer heading</h3>
     <h4>Mi cuarto heading</h4>
@@ -94,7 +94,7 @@
     </p>
     <!-- este texto es un comentario y no va a
     aparecer en el explorador -->
-    <a target="_blank" href="https://www.google.co.nz">Ir a google</a>
+    <a target="_blank" href="https://www.google.co.nz">Ir a google</a> <!-- Agrugue el enlace de google y algunas imagenes -- >
     <img src="img/coffee.png" height="400" />
     
 </body>
