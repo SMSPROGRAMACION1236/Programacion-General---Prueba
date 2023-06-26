@@ -8,6 +8,8 @@ carlos"""
 
 
 ##Trabajar con una cadena.
+
+
 #for x in nombre:
  #   print(x)
 
