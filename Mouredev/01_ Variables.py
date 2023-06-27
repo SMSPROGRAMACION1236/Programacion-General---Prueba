@@ -22,14 +22,26 @@ print(len(my_string_variable))
 # Variables en una sola linea. !Cuidado de abusar de esta sintaxis
 
 
-name, surname, alias, age = "Santiago", "Sanabria", 'SMS', float(15.2)
+name, surname, alias, age = "Santiago", "Sanabria", 'SMS', float(15)
 print("Me llamo:", name, surname,"Mi edad es:", age, "Y mi alias es" , alias)
 
 #Inputs
-firt_name = input("Cual es tu nombre? ")
-age = input("Cuantos años tienes? ")
-print(firt_name)
+"""
+name = input("Cual es tu nombre? ")
+#age = input("Cuantos años tienes? ")
+print(name)
 print(age)
 print(type(type))
+"""
 
-
+# Cambiamos los valores
+name = 55
+age = "Santiage"
+print(name)
+print(age)
+ 
+ #Forjamos el tipo # con el : se le puede asignar una funcion
+address : str = "Mi direccion es: "
+address = True
+print(address)
+print(type(address))

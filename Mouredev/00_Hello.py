@@ -20,3 +20,4 @@ print(type(5)) # Tipo int
 print(type(5.3)) # Tipo float
 print(type(True)) # Tipo bool
 print(type(1 + 2j)) # Tipo complex
+print(type(print("Es del dato NoneType"))) # Tipo None Type
