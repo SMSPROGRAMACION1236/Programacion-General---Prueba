@@ -10,7 +10,7 @@ print(my_bool_variable)
 
  # Concatenacion de variables con un print
 
-
+ 
 print(type (print(my_string_variable,  str (my_bool_variable),my_int_variable ))) # Tipo NoneType
 my_int_to_str_variable = str(my_int_variable)
 print("Esta es el valor de:" , my_bool_variable)
