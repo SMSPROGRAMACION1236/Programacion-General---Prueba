@@ -48,3 +48,4 @@ def print_upper_texts(*texts):
 
 print_upper_texts("Hola", "Python", "Mourede")
 print_upper_texts("Hola")
+"hola"
