@@ -1,3 +1,5 @@
 fn main() {
-    println!("Hello, Rust!");
+    println!("MG y VEV!");
+    let mut hola = 234;
+    println!("Esto es: {}, hola")
 }

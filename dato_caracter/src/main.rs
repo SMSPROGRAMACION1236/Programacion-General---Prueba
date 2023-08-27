@@ -12,5 +12,3 @@ fn main() {
     println!("caracter: {}", c3);
     println!("caracter: {}", c4);
     println!("caracter: {}", c5);
-
-}
