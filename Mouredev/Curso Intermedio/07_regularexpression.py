@@ -68,3 +68,16 @@ print(re.findall(pattern, my_string))
 pattern = r"[0-9]"
 print(re.findall(pattern, my_string)) # Por que solo hay el numero 7
 
+print(re.search(pattern, my_string))
+
+pattern = r"\D"
+print(re.findall(pattern, my_string))
+
+
+pattern = r"[l]."  # Coincidencias con esta letra
+print(re.findall(pattern, my_string))
+
+email = "sanabrasanti1236@gmail.com"
+
+pattern = r"[a-zA-Z0-9]"
+print(re.findall(pattern, email))
