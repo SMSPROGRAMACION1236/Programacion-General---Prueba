@@ -60,14 +60,24 @@ async def user(user:User):
 async def user(user:User):
   if type(search_user(user.id)) == User:
     return {"error": "hay usuario"}
-  else:
-    users_list.append(user)  # En el cliente en la parte de json debemos de poner los datos 
-
+  
+  users_list.append(user)  # En el cliente en la parte de json debemos de poner los datos 
+  return user
 #Put
 
-# @app.put("/user/")
-# async def user(user:User):
-  #Aqui  me quede debo de insistir en no perder tanto tiempo
+@app.put("/user/")
+async def user(user:User):
+
+
+  found = False
+  for index, saved_user in enumerate(users_list):
+    if  saved_user.id == user.id:
+      users_list[index]=user
+      found = True
+    # if not found:
+    #    return {"error": "no hay actualizacion"}
+    # return user
+
 
 
 def search_user(id:int):
@@ -84,8 +94,6 @@ def search_user(id:int):
 # POST: para crear datos.
 # GET: para leer datos.
 # PUT: ##Post##para actualizar datos.
-# DELETE: para borrar datos.
-
-
+# DELETE: para borrar dato
 
 
