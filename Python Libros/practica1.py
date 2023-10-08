@@ -15,3 +15,19 @@ print(len(lyrics))
 
 
 print(lyrics.find("amor"))
+print(abs(-23))
+print(id(23))
+print(isinstance(23, str))# Para confirmar si es un dato tipo ...
+
+from  math  import pi
+pi
+print(round(pi, 1)) #rondondea 
+print(round(pi, 5)) #rondondea 
+
+
+### Bases
+
+# Binaria
+print(0b1010110100110101) # Lleva 0b  de binario a numero
+
+print(bin(2)) # De numero a binario

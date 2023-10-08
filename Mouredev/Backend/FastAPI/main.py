@@ -1,9 +1,17 @@
 from fastapi import FastAPI  # Importamos fastapi
 
+from routers import products # asi tenemos acceso al fichero de productos
+
+from routers import users
+from fastapi.staticfiles import StaticFiles # Para recursos estaticos
+
 app = FastAPI()  # Instanciar fastApi
 
+#Routers
+app.include_router(products.router) # Incluimos en el api principal uno de los routers
+app.include_router(users.router)  # Lo mismo pero con el otro router
 
-
+app.mount("/static", StaticFiles(directory="static"), name= "static")
 
 @app.get("/") # Es la raiz
 
