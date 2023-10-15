@@ -41,4 +41,5 @@ async def url(): # Lo de azul es una funcion que sirve como variable
 # POST: para crear datos.
 # GET: para leer datos.
 # PUT: para actualizar datos.
-# DELETE: para borrar datos.
+# DELETE: para borrar 
+
