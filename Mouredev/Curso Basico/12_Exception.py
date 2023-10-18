@@ -46,6 +46,3 @@ except ValueError as error:  # Para guardar la informacion de un error en una  v
     print(error)
 except Exception as wasaa:
     print(wasaa)
-
-
-    
