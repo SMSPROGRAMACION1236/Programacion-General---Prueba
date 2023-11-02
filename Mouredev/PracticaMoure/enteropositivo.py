@@ -8,4 +8,3 @@ if num > 0:
 else:
   print("No es posible")
 
-print(dir(i))
