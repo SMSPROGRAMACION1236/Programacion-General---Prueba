@@ -164,7 +164,105 @@ cadena = "Esto es un {clave}"
 print(cadena.format_map(mapeo))
 
 
-# # print(yourExtraction.casefold()) 
-# # print(yourExtraction.casefold()) 
-# # print(yourExtraction.casefold()) 
-# # print(yourExtraction.casefold()) 
+print(yourExtraction.index("o"))  # Como argumento debes pasarle  una letra o una palabra y te retornara su indice de la primera letra( Si es una palabra) y si no existe te dira ValueError
+
+
+print(yourExtraction.isalnum())  # Para saber si es alpha numerico( si tiene letras o numeros) en este caso no es ya que Hola Mundo tiene un espacio por lo tanto --> False
+
+
+print(yourExtraction.isalpha()) # Si todos los caracteres son del alfabeto no incluye numeros espacios y simbolos
+
+
+
+print(yourExtraction.isascii())  #Este método se utiliza para comprobar si todos los caracteres en una cadena son caracteres ASCII.Caracteres ASCII son los primeros 128 caracteres en la tabla Unicode. Incluyen letras mayúsculas y minúsculas, números, símbolos de puntuación y caracteres de control. En este caso si es, pero por ejemplo la ñ no es 
+
+print(yourExtraction.isdecimal()) # para saber si el caracter es un decimal en el sistema unicode, solo si todos los caracteres son decimales
+
+print(yourExtraction.isdigit()) # Para saber si el caracter es un digito
+
+jdjdj = "234"
+print(jdjdj.isdigit()) #en este caso si es digit por que 234 es digito
+print(jdjdj.isdecimal())
+
+def prueba_identi(hola):
+  return "Si es"
+
+print(yourExtraction.isidentifier()) # Sirve para saber si es un identificador valido si es una variable, clase, funcion ... en este caso Hola Mundo no lo es 
+print(hola.isidentifier()) # hola es ya que es una variable de una funcion
+
+print(yourExtraction.islower()) # para saber si todo esta en minuscula,en este caso Hola Mundo tiene dos mayusculas por lo tanto no es
+
+print(yourExtraction.isnumeric()) # Para saber si todos son numeros, Hola Mundo no es 
+print(jdjdj.isnumeric())# jdjdj si es 
+print(yourExtraction.isprintable())  # Si todos los caracteres son imprimibles como puede ser letras, numeros y simbolos, si tieen por ejemplo algun acento dira False
+
+
+# print(yourExtraction.isnumeric())
+# print(yourExtraction.isnumeric())
+# print(yourExtraction.isnumeric())
+# print(yourExtraction.isnumeric())
+# print(yourExtraction.isnumeric())
+# print(yourExtraction.isnumeric())
+# print(yourExtraction.isnumeric())
+# print(yourExtraction.isnumeric())
+
+
+
+
+
+# # 4
+#    # Se puede iniciar una lista con [] o con list()
+# print("\tListas")
+# his_nummber =  [20, 3, 11, 15, 19, 81, 44]
+
+# print(his_nummber)
+# print(len(his_nummber)) # Cuenta cuantos elementos existe en una lista
+
+
+# print(type(his_nummber)) #  Imprime el tipo
+
+# print(his_nummber[1]) # Imprime  los valores poniendo como argmemto el indice  Debemos usar []
+
+# print(his_nummber[1])
+
+# print(his_nummber[3])
+
+# print(his_nummber[4])
+
+# print(his_nummber[6])
+# print(his_nummber[5])
+
+# print(his_nummber.count(20)) # Cuenta cuantas veces se repite un elemento en este caso solo 1 y si existe dos 20 entonces serian 2 el output
+
+# print(his_nummber.index(15)) #  Como argumento debes poner el elemnto y te retorna su indice 
+# print(his_nummber.index(15))
+# print(his_nummber.index(20))
+# print(his_nummber.index(81))
+
+
+# a, b, c, d, e, f, g = his_nummber # Asignar cada elemento de una lista a una variable cada una
+# print(g)
+# print(b)
+# print(c)
+# print(d)
+# print(f)
+# print(a)
+
+# his_other_list = [10, 234, 94, 54]
+# print(his_other_list)
+
+# print(his_nummber.append("Hola")) # Se agrega Hola a la lista al final o sea sirve para agregar elementos
+# print(his_nummber)
+
+# print(his_nummber.insert(1,"Ese dia"))
+# print(his_nummber) # Sirve para poner un elemento dentro de una lista pero esta vez si puedes elegir el lugar poniendo como primer argumento es el indice y el segundo es el elemento
+
+# print(his_nummber.remove("Hola")) # Sirve para eliminar un elemento poniendo el elemento a ser eliminado
+
+# print(his_nummber.pop(2)) ### Creo que elimina un elemento poniendo como argumento un indice
+# print(his_nummber.pop(3))
+
+# del his_other_list[0] # Eliminar algo con el indice del es una funcion del sistema y de varios lemguajes es decir no es propio de python
+# print(his_other_list)
+
+
