@@ -17,37 +17,50 @@ class User(BaseModel):
   full_name: str
   email : str
   disabled : bool
+  
+  
 
 class UserDB(User):
   password: str
 
 users_db = {
-    "santiago": {
-        "username" : 'sms',
-        "full_name": "santiagosamnabria",
-        "email" : "sanabriasanti1236@gmail.com",
-        "disabled" : False,
+  "santiago": {
+        "username": "SMS",  # Lo que se pasa al post es santiago no sms
+        "full_name": "Franco Torres",
+        "email": "braismoure@mourede.com",
+        "disabled": False,
         "password": "123456"
-      },
-      "santiago2": {
-        "username" : 'sms2',
-        "full_name": "santiagosamnabria 2",
-        "email" : "sanabriasanti12326@gmail.com",
-        "disabled" : True,
+    },
+    "santiago2": {
+        "username": "sms2",
+        "full_name": "Franco Torres 2",
+        "email": "braismoure2@mourede.com",
+        "disabled": True,  # Con esto si o si esta inactivo
         "password": "654321"
-      }
+}
 }
 
 
+def search_user_db(username:str):
+  if username in users_db:
+    return UserDB(**users_db[username])
+  
+
 def search_user(username:str):
   if username in users_db:
-    return UserDB(users_db[username])
+    return User(**users_db[username])
   
-async def current_user(token:str= Depends(oauth2)):
+# async def current_user(token:str= Depends(oauth2)):
+async def current_user(token: str = Depends(oauth2)):
   user = search_user(token)
   if not user:
     raise HTTPException(
-       status_code=status.HTTP_401_UNAUTHORIZED, detail="Credenciales de autenticacion Invalidas", headers={"WWW-Authenticate":"Bearer"}) # Se recomienda usar el standar
+       status_code=status.HTTP_401_UNAUTHORIZED, detail="Credenciales de autenticacion Invalidas",
+        headers={"WWW-Authenticate": "Bearer"}) # Se recomienda usar el standar
+  if user.disabled: # Lo puse de otro
+         raise HTTPException(
+             status_code=status.HTTP_400_BAD_REQUEST,
+             detail="Usuario inactivo")
   return user
 
 
@@ -61,7 +74,7 @@ async def login(form: OAuth2PasswordRequestForm = Depends()): # El que caputura 
     raise HTTPException(status.HTTP_400_BAD_REQUEST, detail="Incorrect usuario")
   
 
-  user = search_user(form.username)
+  user = search_user_db(form.username)
 
   if not form.password == user.password:
      # Comprabar si el password coinicide con la base de datos
@@ -72,11 +85,9 @@ async def login(form: OAuth2PasswordRequestForm = Depends()): # El que caputura 
 
 
 @app.get("/users/me")
-async def me(user:User = Depends(current_user())):
+async def me(user:User = Depends(current_user)): # Por nada del mundo poner entre parentesis
   return user
 
 
 
 # 4:40:37
-
-# Debo tomar practicar
