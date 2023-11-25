@@ -54,10 +54,33 @@ print(celular1.modelo)
 celular1.marca = 'Apple'
 
 print(celular1.marca) # Ahi lo cambiamos pero no es una buena practica
+print("\tSeparador")# Para separar los prints
+# para crear atributos de instancias
+class Celular : # Cada vez que se crea un objeto, trabaja el contructor
+  def __init__(self, marca, modelo, camera): # Esto es un constructo y defime las propiedades y self es como una forma de referirse a si mismo a un mismo objeto, en este caso a los parametros marca, modelo, y camara
+    self.marca = marca # Es como decir celular.marca
+    self.modelo = modelo
+    self.camera = camera
+    ### metodos ###
+  def llamar(self):# Es importante ponerlo
+      print(f"Estas llamando a alguien{self.modelo}")  # usamos el f string y le ponemos self.modelo o sea celular.modelo
+  def cortar(self):
+      print(f"Estas cortando desde un: {self.modelo}")
+
+celular1 = Celular("Samsung", "S24", "48MP")# Es una funcion que se ejecuta siempre automaticamente cuando se crea un objeto
+celular2 = Celular("Appe", "Iphone 15 pro", "32MP")# Es una funcion que se ejecuta siempre
+celular3 = Celular("Huawei", "Mate40 pro", "64MP")# Es una funcion que se ejecuta siempre
+print(celular1.marca)
+print(celular2.marca)
+print(celular3.marca)
 
 
-class Celular :
-  def __init__(self) -> None: # Esto es un constructor, cad
-    pass
+celular2.llamar()
 
-27:04
+"""
+Metodo = Accion
+Atributo = Cualidad o caracteristica
+"""
+
+###Metodos ###
+
