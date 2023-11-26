@@ -2,7 +2,11 @@ from fastapi import FastAPI  # Importamos fastapi
 
 from routers import products # asi tenemos acceso al fichero de productos
 
-from routers import users
+from routers import users # tenemos acceso al fichero de users
+from routers import jwt_auth_users # tenemos acceso al fichero de jwt_auth_users
+from routers import basic_auth_users # tenemos acceso al fichero de basic_auth_users
+from routers import users_db # tenemos acceso al fichero de users_db
+
 from fastapi.staticfiles import StaticFiles # Para recursos estaticos
 
 app = FastAPI()  # Instanciar fastApi
@@ -10,6 +14,10 @@ app = FastAPI()  # Instanciar fastApi
 #Routers
 app.include_router(products.router) # Incluimos en el api principal uno de los routers
 app.include_router(users.router)  # Lo mismo pero con el otro router
+app.include_router(jwt_auth_users.router)  # Lo mismo pero con el otro router
+app.include_router(basic_auth_users.router)  # Lo mismo pero con el otro router
+app.include_router(users_db.router)  # Lo mismo pero con el otro router
+
 
 app.mount("/static", StaticFiles(directory="static"), name= "static")
 

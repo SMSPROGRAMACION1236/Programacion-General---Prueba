@@ -1,35 +1,28 @@
 from fastapi import APIRouter , HTTPException # Para poder poner excepcions de HTTP
-from pydantic import BaseModel # Nos da la capacidad de crear una entidad 
+from fastapi import status  # Los errores http
 
-router = APIRouter()
-
-@router.get("/usersjson")
-# Entidad user
-
-class User(BaseModel):
-  id: int
-  name : str
-  surname : str
-  url :str
-  age : int
-
-users_list =  [User(id = 1, name="Santi", surname= "sanabria", url = "https://google.com", age = 13),
-              User(id = 2, name="alan", surname= "wasaaa", url ="https://google.com",age = 43),
-              User(id = 3, name="Santi", surname= "sanabria", url ="https://google.com", age = 23)]
-
-async def usersjson():
-  return [{"name":"Santi", "surname": "sanabria", "url":"https://google.com", "age": 13},
-  {"name":"alan", "surname": "wasaaa", "url":"https://google.com","age": 43},
-  {"name":"Santi", "surname": "sanabria", "url":"https://google.com", "age": 23}]
+from db.models.user import User # Importamos el user en donde esta la clase...
+from db.client import db_client
+router = APIRouter(prefix="/userdb", ## Quiere decir que no es necesario mas adelante indicar la url
+                   tags=["userdb"], # Para agrupar en la documentacion
+                    responses={status.HTTP_400_BAD_REQUEST: {"message":"no encontrado"}})  #luego poner el error defaut del api
 
 
-@router.get("/users")
+# @router.get("/usersjson")
+# # Entidad user
+
+
+users_list =  []
+
+
+
+@router.get("/")
 async def users():
   return users_list
 
 
 #Parh
-@router.get("/user/{id}")
+@router.get("/{id}")
 async def user(id: int):
   users =  filter (lambda user: user.id == id, users_list)
  
@@ -43,7 +36,7 @@ async def user(id: int):
   
 #Query
 
-@router.get("/userquery/")
+@router.get("/")
 async def user(id: int, name:str): # Si hay mas parametros en el navegador se debe de especificar eso con el & luego el parametro y el valor
   users =  filter (lambda user: user.id == id, users_list)
   return search_user(id)
@@ -54,18 +47,20 @@ async def user(id: int, name:str): # Si hay mas parametros en el navegador se de
 #   users_list.append(user)   ## This is the facking problem
 
 #Post
-@router.post("/user/",response_model=User,status_code=201)  # el parametro status_code sirve para reasignar un error talves por que es lo mejor # response-model es para poner el error en la documentacion
+@router.post("/",response_model=User,status_code=status.HTTP_201_CREATED)  # el parametro status_code sirve para reasignar un error talves por que es lo mejor # response-model es para poner el error en la documentacion
 async def user(user:User):
-  if type(search_user(user.id)) == User:
-      raise HTTPException(status_code=404, detail="El usuario ya existe")
+  # if type(search_user(user.id)) == User:
+  #     raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="El usuario ya existe")
     # Cuando lanzamos un error debe de ser con el raise
+
+  user_dict = dict(user) # Entidad usario transformado en un usuario
   
-  users_list.append(user)  # En el cliente en la parte de json debemos de poner los datos 
+  db_client.local.users.insert_one(user.dict) # Solo un registro
   return user
 
 #Put
 
-@router.put("/user/")
+@router.put("/")
 async def user(user:User):
 
 
@@ -81,7 +76,7 @@ async def user(user:User):
 # Solo si documento esto me funciona
 
 
-@router.delete("/user/{id}")
+@router.delete("/{id}")
 async def user(id: int):
 
   found = False

@@ -1,5 +1,5 @@
 
-from fastapi import APIRouter, FastAPI, Depends, HTTPException, status # Tipos de errores "status", puede ser mas visual 
+from fastapi import APIRouter, Depends, HTTPException, status # Tipos de errores "status", puede ser mas visual 
 from pydantic import BaseModel
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm # Se importa lo de la autenticacion 
 from jose import jwt, JWTError# Este es  nuevo modulo
@@ -22,7 +22,7 @@ SECRET = "201d573bd7d1344d3a3bfce1550b69102fd11be3db6d379508b6cccc58ea230b"
 # router = APIRouter(prefix="/jwtauth",
 #                    tags=["jwtauth"],
 #                    responses={status.HTTP_404_NOT_FOUND: {"message": "No encontrado"}})
-app = FastAPI()
+router = APIRouter() # Para unir con los demas APIs
 
 oauth2 = OAuth2PasswordBearer(tokenUrl="login") # usamos la instancia, que nos dice como trabajar con autenticacion
 
@@ -96,7 +96,7 @@ async def current_user(user: User = Depends(auth_user)):
     return user
 
 
-@app.post("/login")
+@router.post("/login")
 async def login(form: OAuth2PasswordRequestForm = Depends()):
 
     user_db = users_db.get(form.username)
@@ -119,7 +119,7 @@ async def login(form: OAuth2PasswordRequestForm = Depends()):
     return {"access_token": jwt.encode(access_token, SECRET, algorithm=ALGORITHM), "token_type": "bearer"}
 
 
-@app.get("/users/me")
+@router.get("/users/me")
 async def me(user: User = Depends(current_user)): # Por nada del mundo poner entre parentesis
     return user
 

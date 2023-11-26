@@ -5,9 +5,10 @@ from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm # S
 # El sistema conoce al usuario, como el login
 ##Autorizacion
 #Entrar en algo especifico como en el area de manejo de un canal.
+from fastapi import APIRouter
 
 
-app = FastAPI()
+router = APIRouter()# para conectar con el main y los demas APIs
 
 oauth2 =  OAuth2PasswordBearer(tokenUrl="login")    # usamos la instancia, que nos dice como trabajar con autenticacion
 
@@ -67,7 +68,7 @@ async def current_user(token: str = Depends(oauth2)):
   
   
 # Depends traera datos y no depende de nada
-@app.post("/login")
+@router.post("/login")
 async def login(form: OAuth2PasswordRequestForm = Depends()): # El que caputura los datos
   user_db= users_db.get(form.username)
   if not user_db:
@@ -84,10 +85,17 @@ async def login(form: OAuth2PasswordRequestForm = Depends()): # El que caputura 
   return{"access_token": user.username, "token_type": "bearer"}
 
 
-@app.get("/users/me")
+@router.get("/users/me")
 async def me(user:User = Depends(current_user)): # Por nada del mundo poner entre parentesis
   return user
 
 
 
-# 4:40:37
+
+
+
+# SQL es cuando se pueden relacionar con tablas, y se todos tienen conexiones
+#No SQL no se relacionan, son documentos, tienen tipos de texto JSON, y se divide en directorios con documentos y se comportan de manera independiente, con esto ocupan poco y mas rapidas, y lo malo es el tema de relacionar NoSQL es cuando se puede tener una sola tabla
+
+
+## pymongo es una libreria que te permite trabajar con la logica
