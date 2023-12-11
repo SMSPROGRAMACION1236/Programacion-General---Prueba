@@ -18,10 +18,10 @@
 
 
 
-def leet_speak(text): # El diccionario se almacenara aqui 
+def leet_speak(text): # El diccionario se almacenara aqui
   resultado = "" # Donde almacenaremos el resultado\
   #El diccionario de clave y valor
-  diccionario ={ 
+  diccionario ={
 
     "A": "4",
 
