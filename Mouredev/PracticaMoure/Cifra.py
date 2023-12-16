@@ -10,4 +10,4 @@ elif values == 3:
 elif values == 4:
     print(" Es cuatro")
 else:
-    print("Es mayoe que 4")
+    print("Es mayor que 4")
