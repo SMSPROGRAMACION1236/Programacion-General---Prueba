@@ -19,7 +19,6 @@ class User(BaseModel):
   email : str
   disabled : bool
   
-  
 
 class UserDB(User):
   password: str

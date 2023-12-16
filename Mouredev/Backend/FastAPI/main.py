@@ -22,9 +22,10 @@ app.include_router(users_db.router)  # Lo mismo pero con el otro router
 app.mount("/static", StaticFiles(directory="static"), name= "static")
 
 @app.get("/") # Es la raiz
+async def root():
+   return {"message": "Hello World"}
 
-async def root():  # Llama al servidor debe ser asincrota es decir tiene que tener sincronizacion con el servidor
-   return "!Hola Mund2o3"
+
 
 
 # uvicorn main:app --reload # uvicorn el servidor en donde main es el fichero cual queremos arrancar y app la instancia que queremos arrancar y el --reloand va a cargar el servidor automaticamente
@@ -34,8 +35,7 @@ async def root():  # Llama al servidor debe ser asincrota es decir tiene que ten
 @app.get("/url") # Seria por ejemplo el ip mas santi en el navegador
 async def url(): # Lo de azul es una funcion que sirve como variable
    return { "url":"https://mouredev.com/python"} # El estandar es con json
-   
-   
+
 
 
 # Error 404 no found osea que encuentra ese ip

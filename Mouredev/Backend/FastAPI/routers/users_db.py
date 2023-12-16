@@ -3,6 +3,9 @@ from fastapi import status  # Los errores http
 
 from db.models.user import User # Importamos el user en donde esta la clase...
 from db.client import db_client
+from bson import ObjectId
+
+from db.schemas.user import user_schema, users_schema
 router = APIRouter(prefix="/userdb", ## Quiere decir que no es necesario mas adelante indicar la url
                    tags=["userdb"], # Para agrupar en la documentacion
                     responses={status.HTTP_400_BAD_REQUEST: {"message":"no encontrado"}})  #luego poner el error defaut del api
@@ -16,30 +19,28 @@ users_list =  []
 
 
 
-@router.get("/")
+@router.get("/", response_model=list[User])
 async def users():
-  return users_list
+  return users_schema(db_client.local.users.find()) # Return all in the database
 
 
-#Parh
+#Path
 @router.get("/{id}")
-async def user(id: int):
-  users =  filter (lambda user: user.id == id, users_list)
- 
- 
+async def user(id: str):
+  return search_user("_id",ObjectId(id))
+# #   users =  filter (lambda user: user.id == id, users_list)
+# # No se puede poner id 4 ya no existe
+#   try:
+#     return list(users)[0]
+#   except:
+#     return {"error": "no hay usuario"} # En los casos de sea 4 y asi explica el error
 
-# No se puede poner id 4 ya no existe
-  try:
-    return list(users)[0]
-  except:
-    return {"error": "no hay usuario"} # En los casos de sea 4 y asi explica el error
-  
 #Query
 
 @router.get("/")
-async def user(id: int, name:str): # Si hay mas parametros en el navegador se debe de especificar eso con el & luego el parametro y el valor
-  users =  filter (lambda user: user.id == id, users_list)
-  return search_user(id)
+async def user(id: str, name:str): # Si hay mas parametros en el navegador se debe de especificar eso con el & luego el parametro y el valor
+  # users =  filter (lambda user: user.id == id, users_list)
+  return search_user("_id",ObjectId(id))
 #query podemos igualar una clave con un valor en una url en donde debemos de tipar todo y usa el signo ?
 
 # @app.post("/user/")
@@ -49,14 +50,16 @@ async def user(id: int, name:str): # Si hay mas parametros en el navegador se de
 #Post
 @router.post("/",response_model=User,status_code=status.HTTP_201_CREATED)  # el parametro status_code sirve para reasignar un error talves por que es lo mejor # response-model es para poner el error en la documentacion
 async def user(user:User):
-  # if type(search_user(user.id)) == User:
-  #     raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="El usuario ya existe")
+  if type(search_user("email",user.email)) == User:
+      raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="El usuario ya existe")
     # Cuando lanzamos un error debe de ser con el raise
-
+    
   user_dict = dict(user) # Entidad usario transformado en un usuario
-  
-  db_client.local.users.insert_one(user.dict) # Solo un registro
-  return user
+  del user_dict["id"]
+  id = db_client.local.users.insert_one(user_dict).inserted_id # Solo un registro
+
+  new_user = user_schema(db_client.local.users.find_one({"_id":id}))
+  return User(**new_user)
 
 #Put
 
@@ -87,19 +90,22 @@ async def user(id: int):
       found = True
   if not found:
     return {"error": "no hay actualizacion"}
-  
-
-  
 
 
-def search_user(id:int):
-   users =  filter (lambda user: user.id == id, users_list)
-   try:
-    return list(users)[0]
-   except:
-    return {"error": "no hay usuario"}#Path cuando los parametros son obligatorios
+def search_user(field:str, key):
+
+    try:
+      user = db_client.local.users.find_one({field :key})
+      return User(**user_schema(user))
+    except:
+      print("error")
+      return {"error": "no hay usuario"}
+
+# 6:52
+
+
+#Path cuando los parametros son obligatorios
 #Query los que pueden ir y los que no
-   
 
 # Normalmente usas:
 
@@ -118,6 +124,4 @@ def search_user(id:int):
     # 400y anteriores son para respuestas de "Error del cliente". Este es el segundo tipo que probablemente usarías con más frecuencia.
     # Un ejemplo es 404, para una respuesta "No encontrado".
     # Para errores genéricos del cliente, puedes usar 400.
-    # 500y superiores son para errores del servidor. Casi nunca los usas directamente. Cuando algo sale mal en alguna parte del código de su aplicación o servidor, automáticamente devolverá uno de estos códigos de estado
-
-
+    # 500y superiores son para errores del servidor. Casi nunca los usas directamente. Cuando algo sale mal en alguna parte del código de su aplicación o servidor, automáticamente devolverá uno de estos códigos de estado\

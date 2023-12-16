@@ -1,7 +1,6 @@
 
 from pydantic import BaseModel # Nos da la capacidad de crear una entidad 
 class User(BaseModel):
-  id: int
+  id: str |None
   username : str
-  email : str\
-# Min 6:19:02
+  email : str
