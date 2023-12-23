@@ -1,6 +1,9 @@
 # https://aprendeconalf.es/docencia/python/ejercicios/tipos-datos/
+
+#Types of dates
 # Exercise 1
 # print a helloworld.
+
 
 
 print("Hello World!")
@@ -97,6 +100,7 @@ final_weight = ((clown* 112)+(doll * 75))
 print(f"You'll like: {clown} clowns and: {doll} dolls and they totally will weight: {final_weight} g")
 
 """
+Exercise 11
 Imagine you'll open a bank account you'll give you 4% of interest per year. Write a program it'll start ask about the money you put into the bank account, and then calculate the money of saves in the first, second and third year, use just two decimals
 """
 
@@ -108,3 +112,106 @@ account2=  bank_account *((1 + 0.04)**2)
 print(f"The second year, you will pay: {round(account2, 2)}")
 account3=  bank_account *((1 + 0.04)**3)
 print(f"The third year, you will pay: {round(account3, 2)}")
+
+"""
+Exercise 12
+A bread store sell pieces of bread it's 3.49$ each one. the bread isn't of the same day, has a discount  of 60%. Write a program it counts the number of breads(which isn't of the day) selling, then the program must show the normal price, the discount to be old and the last cost """
+print("The bread normally cost: 3,49")
+print(3.49*(60/100))
+number_breads_old = int(input("How many breads, that is old will you take: "))
+number_breads_new = int(input("How many breads, that is old will you take: "))
+
+costing_new = number_breads_new * 3.49
+costing_old =  number_breads_old * 2.094
+saving = 1.396 * number_breads_old
+total_cost = costing_new + costing_old
+print(f"You take us: {round(costing_new, 3)} dollars for the new ones and: {round(costing_old, 3)} dollars for the older ones that has a discount of 60%, you'll spend: {round(saving, 3)} dollars considering the discount and the final cost will be: {round(total_cost, 3)} dollars")
+
+
+
+# https://aprendeconalf.es/docencia/python/ejercicios/cadenas/
+#Strings
+
+"""Exercise 1
+Write a program the user, put his name and a number and print the name considering the number in different line"""
+
+
+random_number = int(input("Enter a number: "))
+name = str(input("What's your name? "))
+
+for i in range(random_number):
+  print(name)
+
+"""Exercise 2
+Ask to the user his full name, and do 3 prints, one all in little letter, the other with all with capital letters and the last one with the first letter in capital letter.The user can write  it how he likes"""
+
+full_name = str(input("What is your full name: "))
+
+print(full_name.lower())
+print(full_name.upper())
+
+print(full_name.title())
+
+
+"""Exercise 3
+ask to the user his name, and the count the numbers of letters that input have, it must say: <NAME> has <n> letters, where NAME must be in capital ones"""
+
+capital_name = str(input("Enter your name: "))
+capital_name = capital_name.upper()
+
+print(f"{capital_name} has {len(capital_name)} letters ")
+
+"""Exercise 4
+A company has a phone format, that use +34 and it has two numbers as extensions(Example: +34-913724710-56)
+Write a program, that delate the prefix and the extensions"""
+### That i do :(
+prefix_num_extension = list(str(input("Enter your full number: ")))
+prefix_num_extension.pop(-16)
+prefix_num_extension.pop(-15)
+prefix_num_extension.pop(-14)
+prefix_num_extension.pop(-13)
+prefix_num_extension.pop(-1)
+prefix_num_extension.pop(-2)
+prefix_num_extension.pop(-3)
+prefix_num_extension = ''.join(prefix_num_extension)
+print(f"Your phone number without the prefix and the extensions will be: {prefix_num_extension}")
+
+
+### The best form from the web
+# prefix_num_extension = str(input("Enter your full number: "))
+# print(f"Your phone number without the prefix and the extensions will be: {prefix_num_extension[4:-3]}")
+
+""" Exercise 5
+The user will give you a Phrase, and you will return the  reverse one"""
+
+word = str(input("Enter a word "))
+
+reverse_word = word[::-1]
+print(reverse_word)
+
+"""Exercise 6
+make a program It ask about a word and then a vocal and print the mix of the ones and vocal must be in capital letter"""
+
+without_vocal = str(input("Enter a word: "))
+ask_vocal = str(input("Enter a vocal: "))
+
+print(without_vocal.replace(ask_vocal, ask_vocal.upper()))
+
+"""Exercise 7
+Ask the email, and return the same one but with ceu.es."""
+
+email_old = str(input("Enter your email: "))
+
+ceu_es = email_old.replace("gmail.com","ceu.es.")
+
+print(ceu_es)
+
+
+
+"""Exercise 7
+Ask the price of something in euros with two decimals and return the number of euros and decimals entered"""
+
+euroes= input("Enter the prize: ")
+parts = euroes.split(".")
+
+print(f"It's cost {parts[0]} euros, and {parts[1]} coins")
