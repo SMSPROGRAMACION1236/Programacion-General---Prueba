@@ -31,3 +31,20 @@ print(round(pi, 5)) #rondondea
 print(0b1010110100110101) # Lleva 0b  de binario a numero
 
 print(bin(2)) # De numero a binario
+
+
+print(int(4**(1/2)))
+print(bin(2783749777777767683587638))
+print(0b1001001101011110110110000010111001110111100111001000110001111011011111111000110110)
+
+# Octal base
+
+print(oct(73847))
+print(0o220167)
+
+# hexadecimal
+
+print(hex(23434543))
+print(0x165952f)
+
+print(0xA)
