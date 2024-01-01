@@ -6,6 +6,8 @@ class Person():
     self.name = name
     self.age = age
   def __str__(self) -> str: # Return a representation of an object in string
+    
+    
     return f"Person(name={self.name}, age={self.age})"
   def __repr__(self) -> str: # is similar __str__ but we can rebuild it in another one
     return f'Person("{self.name}", {self.age})'

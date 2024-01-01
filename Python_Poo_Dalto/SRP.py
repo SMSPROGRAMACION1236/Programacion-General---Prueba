@@ -1,4 +1,3 @@
-
 class Vehicle:
     """This class represents a vehicle."""
 
