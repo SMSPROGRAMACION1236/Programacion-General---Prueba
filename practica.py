@@ -208,10 +208,129 @@ print(ceu_es)
 
 
 
-"""Exercise 7
+"""Exercise 8
 Ask the price of something in euros with two decimals and return the number of euros and decimals entered"""
 
-euroes= input("Enter the prize: ")
-parts = euroes.split(".")
+euro= input("Enter the prize: ")
+parts = euro.split(".")
 
 print(f"It's cost {parts[0]} euros, and {parts[1]} coins")
+
+
+
+
+"""Exercise 9
+Ask the user his date of born, in dd/mm/aaaa  and print the day, the month and the year"""
+
+date_of_born = str(input("Enter your date of born: "))
+pieces = date_of_born.split("/")
+
+print(pieces[0])
+print(pieces[1])
+print(pieces[2])
+
+
+"""Exercise 10
+Write a program asking about the products, separate by comas and print each product in a different line"""
+
+products = str(input("What are the products: "))
+
+show_products = products.split(",")
+
+for word in show_products:
+  print(word)
+pieces
+
+"""Exercise 11
+Ask about the name of a product, its price and the number of units and print a string with the product name, its  unit price with 8 digits that is's integer and two decimals, the number of unit with 3 digits and the total cost with 8 digits in integer and two decimals"""
+
+
+product_name = str(input("Enter the product name: "))
+
+many = input(f"How many of {product_name} do you like: ")
+many = int(many) 
+each_unit = input("Enter the unit prize: ")
+each_unit = int(each_unit)
+total_many = many * each_unit 
+
+each_unit = "{:.2f}".format(each_unit)
+each_unit = each_unit.zfill(11)
+
+total_many = "{:.2f}".format(float(total_many))
+total_many = total_many.zfill(11)
+
+many = str(many) 
+many = many.zfill(3)
+print(f"You'll buy: {product_name} you'll have: {many} units that each one cost: {each_unit} dollars, totally is going to be: {total_many}")
+
+# https://aprendeconalf.es/docencia/python/ejercicios/condicionales/
+#conditionals
+
+"""Exercise 1
+Ask the user his age and print if he is older or not"""
+
+age = int(input("How old are you: "))
+
+if age < 18:
+  print("You are younger than 18 years old.")
+else:
+  print("You are older than 18 years old.")
+""" Exercise 2
+Check if the password is correct where the password is 'password'"""
+
+put_password = "password"
+check_password = str(input("Enter your password: "))
+
+if check_password == put_password:
+  print("It is")
+else:
+  print("It isn't")
+
+
+"""Exercise 3
+Ask the user two numbers divided  and if the divisor is 0 print a error"""
+
+n1 = int(str(input("Enter the dividing: ")))
+n2 = int(str(input("Enter the divisor: ")))
+
+if n2 == 0:
+  print("Error")
+else:
+  print(int(n1 /n2))
+  
+  
+"""Exercise 4
+ask the user a number a check if it is pair or the opposite"""
+
+pair = int(input("Enter a number: "))
+
+if pair % 2 == 0:
+  print("it's pair")
+else:
+  print("It's odd")
+"""Exercise 5
+The user need to know if the persons can have a tribute just if they earn more 1000 dollars every month and they are older that 16 years. Please check"""
+
+
+pre_tribute = int(input("how much do you earn in this month: "))
+get_year =int(input("How old are you: "))
+
+if pre_tribute >= 1000 and get_year > 16:
+  print("You need to tribute")
+else:
+  print("you don't need to tribute yet")
+"""
+Exercise 6
+There are two groups the group A with women with their first name letter before M and the men with his first name letter after N and the Group B is the rest"""
+
+name_to_check = str(input("Enter your name: ")).lower()
+choose_sex = str(input("What are your sex: ")).lower()
+
+if choose_sex == "female" and name_to_check[0] < "m":
+  print("You'll be in the group A")
+
+elif choose_sex == "male" and name_to_check[0] > "n":
+  print("You'll be in the group A")
+
+else:
+  print("you'll be in the group B")
