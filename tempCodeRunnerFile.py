@@ -1,12 +1,9 @@
 
-name_to_check = str(input("Enter your name: ")).lower()
-choose_sex = str(input("What are your sex: ")).lower()
+age_to_enter = int(input("Enter your age: "))
 
-if choose_sex == "female" and name_to_check[0] < "m":
-  print("You'll be in the group A")
-
-elif choose_sex == "male" and name_to_check[0] > "n":
-  print("You'll be in the group A")
-
-else:
-  print("you'll be in the group B")
+if age_to_enter < 4:
+  print("You can enter for free")
+elif age_to_enter >=4 and age_to_enter < 18:
+  print("You'll pay 5$")
+elif age_to_enter >= 18 :
+  print("You'll pay 10$")

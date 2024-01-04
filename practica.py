@@ -334,3 +334,57 @@ elif choose_sex == "male" and name_to_check[0] > "n":
 
 else:
   print("you'll be in the group B")
+
+"""
+Exercise 7
+Knowing the table of fax, put the income in the different groups of fax
+"""
+
+income = float(input("Enter your income per year: "))
+
+if income < 10000:
+  print(f"Your fax is 5% and you'll pay: {income * 5 / 100} dollars ")
+elif income >= 10000 and income < 20000:
+  print(f"Your fax is 15% and you'll pay: {income * 15 / 100} dollars ")
+elif income >=20000 and income < 35000:
+  print(f"Your fax is 20% and you'll pay: {income * 20 / 100} dollars ")
+elif income >= 35000 and income < 60000:
+   print(f"Your fax is 30% and you'll pay: {income * 30 / 100} dollars ")
+else:
+   print(f"Your fax is 45% and you'll pay: {income * 45 / 100} dollars ")
+
+"""
+Exercise 8
+In a company the clerks have been checked, everyone has points it started in 0.0 and i can increase, they can have points, 0.0, 0.4, 0.6 o mas, but without any values between those ones, the money earn in each level is 2.400 dollars. Write a program it read the points given and the quantity of money earning"""
+
+point = float(input("Enter your points: "))
+
+quantity_of_money = 2400 
+unaccepted =  0.0
+accepted = 0.4
+too_good = 0.6
+
+
+if point == unaccepted :
+  level = "unaccepted"
+  print(f"you are in level: {level} and you'll earn: {unaccepted * quantity_of_money}")
+elif point == accepted:
+  level = "accepted"
+  print(f"you are in level: {level} and you'll earn: {accepted * quantity_of_money}")
+elif point >= too_good:
+  level = "too good"
+  print(f"you are in level: {level} and you'll earn: {point * quantity_of_money}")
+else:
+  print("try again")
+  
+"""
+Exercise 9"""
+
+age_to_enter = int(input("Enter your age: "))
+
+if age_to_enter < 4:
+  print("You can enter for free")
+elif age_to_enter >=4 and age_to_enter < 18:
+  print("You'll pay 5$")
+elif age_to_enter >= 18 :
+  print("You'll pay 10$")
