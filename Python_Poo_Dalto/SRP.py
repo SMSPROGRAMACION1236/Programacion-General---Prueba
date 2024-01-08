@@ -1,3 +1,4 @@
+# each class have a functionality just one and it can do something without another classes
 class Vehicle:
     """This class represents a vehicle."""
 
