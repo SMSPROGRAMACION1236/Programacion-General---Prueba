@@ -378,7 +378,8 @@ else:
   print("try again")
   
 """
-Exercise 9"""
+Exercise 9
+A company that is has a playground needs to calculate the price it must sell to enter there, it need to ask the age of the client and show the price of the entering. if the client is lower than 4 years can enter free, if it has between 4 and 18 years old must pay 5$ and if it is older than 18 years it'll pay 10$"""
 
 age_to_enter = int(input("Enter your age: "))
 
@@ -388,3 +389,91 @@ elif age_to_enter >=4 and age_to_enter < 18:
   print("You'll pay 5$")
 elif age_to_enter >= 18 :
   print("You'll pay 10$")
+"""Exercise 10
+A shop of pizza, has a vegetable pizza and a meat pizza each of them has their own Ingredients, and write if the user choose the vegetable one or the meat one and show the ingredients"""
+
+kind_of_pizza = str(input("Enter the kind of pizza:(Meat/Vegetable): ")).lower()
+
+if kind_of_pizza == "meat":
+  ingredients_meat = str(input("Choose the ingredient:(pimiento/tofu)"))
+  print(f"You choose a meat one, it have mozzarella, tomato, {ingredients_meat}")
+elif kind_of_pizza == "vegetable":
+  ingredient_vegetable = str(input("Choose the ingredient:(peperoni/ham/salmon): "))
+  print(f"You choose a vegetable one, it have mozzarella, tomato, {ingredient_vegetable}")
+
+
+### Loops ###
+#https://aprendeconalf.es/docencia/python/ejercicios/bucles/
+
+"""Exercise 1
+Ask the user a word and print ten times"""
+
+word_loop = str(input("Enter a word: "))
+
+for i in range(10):
+  print(word_loop)
+
+"""Exercise 2 
+Ask the user his age and show all the ages he has been(from year 1)"""
+
+
+age_for_loop = int(input("Enter your age: "))
+
+for i in range(1, age_for_loop +1):
+  print(i)
+
+"""Exercise 3
+Write a  program ask a  positive number and show all the numbers odds from 1 to that numbers with comas"""
+
+
+
+num_for_loop = int(input("Enter a positive number: "))
+
+
+# while num_for_loop > 0:
+#   # print("It's negative")
+#   # num_for_loop = int(input("Enter a positive number: "))
+#   print(num_for_loop % 2  == 0)
+
+
+for i in range(1, num_for_loop):
+  if i % 2 == 0:
+    print(i, end=",")
+"""Exercise 4
+Write a program ask the user a positive number and show by screen the count back from the number to 0 by comas"""
+
+num_back = int(input("Enter a positive number"))
+# while num_back >= 0:
+#   print(num_back, end=",")
+#   num_back = num_back - 1
+
+
+"""Exercise 5
+Write a program ask the quantity to income, the income in year the numbers of years, and show the capital had in the income each year during it"""
+amount = float(input("Quantity to income "))
+interest = float(input("¿faz of interest? "))
+years = int(input("Years?"))
+for i in range(years):
+    amount *= 1 + interest / 100 
+    print("Capital after " + str(i+1) + " years: " + str(round(amount, 2)))
+    # TODO: Complete by myself it
+
+
+"""
+Exercise 6
+Write a program ask a integer number ans show a right triangle with hight of the input
+"""
+
+number_for_triangle = int(input("Enter a number"))
+sign = ""
+for i in range (1, number_for_triangle + 1):
+  sign += "*" * 1
+  print(sign)
+"""
+Exercise 7
+Write a program it show the times table"""
+
+for i in range(1, 11):
+  for k in range(1, 11):
+    print("{:3d}".format(k * i), end=" \t")
+  print("")

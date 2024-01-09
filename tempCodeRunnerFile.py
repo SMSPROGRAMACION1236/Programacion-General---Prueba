@@ -1,9 +1,5 @@
 
-age_to_enter = int(input("Enter your age: "))
-
-if age_to_enter < 4:
-  print("You can enter for free")
-elif age_to_enter >=4 and age_to_enter < 18:
-  print("You'll pay 5$")
-elif age_to_enter >= 18 :
-  print("You'll pay 10$")
+for i in range(1, 11):
+  for k in range(1, 11):
+    print("{:3d}".format(k * i), end=" \t")
+  print("")
