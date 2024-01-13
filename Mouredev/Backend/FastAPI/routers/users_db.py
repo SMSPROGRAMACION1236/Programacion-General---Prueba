@@ -15,13 +15,13 @@ router = APIRouter(prefix="/userdb", ## Quiere decir que no es necesario mas ade
 # # Entidad user
 
 
-users_list =  []
+# users_list =  []
 
 
 
 @router.get("/", response_model=list[User])
 async def users():
-  return users_schema(db_client.local.users.find()) # Return all in the database
+  return users_schema(db_client.users.find()) # Return all in the database
 
 
 #Path
@@ -56,46 +56,40 @@ async def user(user:User):
     
   user_dict = dict(user) # Entidad usario transformado en un usuario
   del user_dict["id"]
-  id = db_client.local.users.insert_one(user_dict).inserted_id # Solo un registro
+  id = db_client.users.insert_one(user_dict).inserted_id # Solo un registro
 
-  new_user = user_schema(db_client.local.users.find_one({"_id":id}))
+  new_user = user_schema(db_client.users.find_one({"_id":id}))
   return User(**new_user)
 
 #Put
 
-@router.put("/")
+@router.put("/", response_model=User)
 async def user(user:User):
+  user_dict = dict(user)
+  del user_dict["id"]
 
-
-  found = False
-  for index, saved_user in enumerate(users_list):
-    if  saved_user.id == user.id:
-      users_list[index]=user
-      found = True
-  if not found:
+  try:
+    db_client.users.find_one_and_replace({"_id": ObjectId(user.id)}, user_dict)
+  except:
     return {"error": "no hay actualizacion"}
-  return user
+
+
+  return search_user("_id", ObjectId(user.id))
 
 # Solo si documento esto me funciona
 
 
-@router.delete("/{id}")
-async def user(id: int):
+@router.delete("/{id}", status_code=status.HTTP_204_NO_CONTENT)
+async def user(id: str):
 
-  found = False
-
-  for index, saved_user in enumerate(users_list):
-    if  saved_user.id == id:
-      del users_list[index]
-      found = True
+  found = db_client.local.users.find_one_and_delete({"_id": ObjectId(id)}) # To delete it, we put how it search and it is looking for the id
   if not found:
     return {"error": "no hay actualizacion"}
-
 
 def search_user(field:str, key):
 
     try:
-      user = db_client.local.users.find_one({field :key})
+      user = db_client.users.find_one({field :key})
       return User(**user_schema(user))
     except:
       print("error")

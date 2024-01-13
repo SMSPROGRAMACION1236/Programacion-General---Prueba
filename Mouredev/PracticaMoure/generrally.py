@@ -111,7 +111,7 @@ print(f"Soy {name} de {school} del {course} y hablo {language}")
 
 myVariable = "python"
 a, b, c, d, h, n= myVariable # Es decir cada letra de python se le asigna a cada variable en este caso son letras tambien por ejemplo a = p
- 
+
 print(a)
 print(b)
 print(c)
@@ -417,3 +417,4 @@ update_set = owl_set
 update_set.update({"Robert", 1643}) # Sirve para eliminar, agregar o remplazar elementos, pero no puedes camnbiar un elemento especifico por la naturaleza de los sets
 print(update_set)
 
+print(his_nummber)
