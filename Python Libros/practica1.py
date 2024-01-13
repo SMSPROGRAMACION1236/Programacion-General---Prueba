@@ -18,7 +18,6 @@ print(lyrics.find("amor"))
 print(abs(-23))
 print(id(23))
 print(isinstance(23, str))# Para confirmar si es un dato tipo ...
-
 from  math  import pi
 pi
 print(round(pi, 1)) #rondondea 
