@@ -474,6 +474,116 @@ Exercise 7
 Write a program it show the times table"""
 
 for i in range(1, 11):
-  for k in range(1, 11):
+  for k in range(0, 11):
     print("{:3d}".format(k * i), end=" \t")
   print("")
+"""
+Exercise 8
+Write a program that ask the user a positive number and show a triangle with from 1 to that number in the output but just the odd ones """
+
+
+triangle_for_number = int(input("enter a positive"))
+
+while triangle_for_number < 0:
+  print("It's not positive")
+  triangle_for_number = int(input("enter a positive"))
+
+
+def print_number(triangle_for_number):
+  for t in range(1, triangle_for_number+1, 2):
+    for h in range(t, 0, -2):
+      print(h, end="")
+    print()
+print_number(triangle_for_number)
+"""
+Exercise 9
+Create a variable, it has 'password' , ask to the user about it since the password will be correct"""
+
+loop_password = "password"
+user_password = str(input("Type your password: "))
+
+while user_password != loop_password:
+  print("Your password is incorrect")
+  user_password = str(input("Type your password: "))
+  
+else:
+  print("Your password is correct")
+
+"""Exercise 10
+Write a program that ask the user a number and show if it is  a prime number"""
+
+prime_number = int(input("Type a  positive number: "))
+verify = "V"
+init = 2
+
+while prime_number <0:
+  print("This is not a valid input")
+  prime_number=int(input("Type a positive number"))
+else:
+  while ((verify == "V") and(init < prime_number)):
+    if (prime_number % init )== 0 :
+      verify ="F"
+    else:
+      init +=1
+  if verify=="V":
+    print("It's prime")
+  else:
+    print("It's not prime")
+    
+"""Exercise 11
+Write a program that print the letters of the given string but reverse the  letters
+
+"""
+
+string_for_reverse = str(input("Enter a string: "))
+
+for i in range(len(string_for_reverse) - 1, -1, -1):
+  print(string_for_reverse[i])
+
+"""Exercise 12
+Write a program, ask a phrase and a letter, and return the number of letters into the phrase"""
+
+import re
+phrase = input("Enter a phrase: ")
+letter = input("Enter a letter: ")
+alphabets = re.findall("[a-zA-Z]", phrase) # extract all the alphabets from the phrase
+count = len([c for c in alphabets if c == letter]) # count the number of alphabets that match the letter
+print("The number of", letter, "in the phrase is", count)
+
+"""Exercise13
+Write a program, that repeat the word entering and stop the program if it is leave"""
+
+while True:
+  expression = str(input("Enter something: ")).lower()
+  if expression == "leave":
+    break
+  print(expression)
+### Lists and tuples
+# https://aprendeconalf.es/docencia/python/ejercicios/listas-tuplas/
+
+
+"""Exercise 1
+Write a program keep  the topics of a class math, physic, chemistry, history and literature in a list and shoe them"""
+
+
+topics = ["math", "physic", "chemistry", "history", "literature"]
+print(topics)
+
+"""Exercise 2
+keep the topics like the first one, but print I study <topic> where it the variable that has the subjects"""
+
+subjects = ["math", "physic", "chemistry", "history", "literature"]
+for subject in subjects:
+  print(f"I study: {subject}")
+  
+"""Exercise 3
+Write a program that keep the same subjects, ask the user the note he/she take in each subject and show In<subject> you have taken <grade>"""
+
+while True: 
+  subjects = ["math", "physic", "chemistry", "history", "literature"]
+  for subject in subjects:
+    grades = int(input(f"How is your grade in {subject}: "))
+    print(f"I took{grades} in {subject}")
+  break
+
+
