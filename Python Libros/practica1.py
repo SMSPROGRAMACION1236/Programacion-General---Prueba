@@ -47,3 +47,35 @@ print(hex(23434543))
 print(0x165952f)
 
 print(0xA)
+
+space_odyssey = 2001
+print(space_odyssey)
+print(type("Good night and Good luck"))
+print(type(True))
+
+result = 10 * 3.0
+print(result)
+
+
+print(str(10))
+
+thing = r"first\nsecond" # To stop \n
+print(thing)
+
+text = "My name's Thomas. I'm an architect in my mon's company"
+
+print(text[2:9]) 
+print("My" in text) # If My is in text
+
+print(text.split())
+print(text.partition(" ")) # You'd type in the argument what is the Middle to separate
+print(text.count(" ")) # How many times that repeated
+print(text.find("name")) # to find something
+print(text.index("My")) # Similar find
+print("Hello" not in text) # is like if Hello isn't in text
+
+texting = """Hi Brenda, . Hi, Helen"""
+
+print(texting.replace("Hi", "hello", 1))  # To replace  Hi by hello 1 time
+
+print(text.swapcase())# The opposite of the letters
