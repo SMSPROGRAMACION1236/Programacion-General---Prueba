@@ -576,6 +576,7 @@ subjects = ["math", "physic", "chemistry", "history", "literature"]
 for subject in subjects:
   print(f"I study: {subject}")
   
+  
 """Exercise 3
 Write a program that keep the same subjects, ask the user the note he/she take in each subject and show In<subject> you have taken <grade>"""
 
@@ -585,5 +586,30 @@ while True:
     grades = int(input(f"How is your grade in {subject}: "))
     print(f"I took{grades} in {subject}")
   break
+# TODO: I can do it better
+
+"""
+Exercise 4
+Write a program ask the user about the winner numbers in the lottery and keep them in a list and show from little to big"""
+
+lottery = []
+for i in range(6):
+  lottery.append(int(input("Type the winner numbers: ")))
+
+lottery.sort()
+print(str(lottery))
+
+"""Exercise 5
+Write a program that keep  the numbers in a list from 1 to 10 a print it in the opposite order with comas"""
+
+not_together_numbers = []
+
+for i in range(1,11):
+  not_together_numbers.append(i)
+
+not_together_numbers.sort(reverse=True)
+print(not_together_numbers)
 
 
+
+total_subjects = ["math", "physic", "chemistry", "history", "literature"]
