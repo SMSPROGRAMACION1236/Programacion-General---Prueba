@@ -1,1 +1,1 @@
-print("hh")
+print("\x1b[0;37m" + "Ho")
