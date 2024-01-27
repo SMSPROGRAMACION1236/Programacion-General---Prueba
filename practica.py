@@ -561,7 +561,6 @@ while True:
 ### Lists and tuples
 # https://aprendeconalf.es/docencia/python/ejercicios/listas-tuplas/
 
-
 """Exercise 1
 Write a program keep  the topics of a class math, physic, chemistry, history and literature in a list and shoe them"""
 
@@ -610,6 +609,93 @@ for i in range(1,11):
 not_together_numbers.sort(reverse=True)
 print(not_together_numbers)
 
+"""
+Exercise 6
+Write a program keep the subjects like math, physics, chemistry, history and literature in a list, ask to everyone about his note in each subject and delete the subjects that you passed. Show the subjects the user need to repeat"""
+
+subjects = ["math", "physic", "chemistry", "history", "literature"]
+grades = []
+limit = 5
+subjects_to_repeat = []
 
 
-total_subjects = ["math", "physic", "chemistry", "history", "literature"]
+for subject in subjects:
+  grade= input(f"What is your grade in {subject}: ")
+  grades.append(grade)
+for subject, grade in zip(subjects, grades):
+  grade = int(grade)
+  if grade < limit:
+    subjects_to_repeat.append((subject))
+print(f"The subjects like {subjects_to_repeat}, you  will to repeat because there are below of the limit {limit} of points")
+"""
+Exercise 7
+Write a program keep the alphabet in a list, delete the letters
+"""
+
+abc = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+filter_abc = [letter for index, letter in enumerate(abc, start=1) if index % 3 != 0]
+print(filter_abc)
+
+"""Exercise8
+Write a program the user ask a word and show if it is a palindrome"""
+
+palindrome = list(input("Enter a word"))
+reversed_palindrome = palindrome[::-1]
+
+if palindrome == reversed_palindrome:
+  print("Yes")
+else:
+  print("No")
+
+"""Exercise 9
+Write a program ask a word y show it in the scream the number of times that has each vocal"""
+#My solution
+
+word = input("Enter a word: ").lower()
+
+letters =  ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+
+a = word.count(letters[0])
+e = word.count(letters[4])
+i = word.count(letters[8])
+o = word.count(letters[15])
+u = word.count(letters[21])
+
+print(f"The letter a with {a} repetitions, letter e with {e} repetitions, letter i with {i} repetitions, letter p with {o} repetitions and letter u with {u} repetitions")
+#The best solution 
+
+word = input("Type a word: ")
+vocals = ['a', 'e', 'i', 'o', 'u']
+for vocal in vocals: 
+    times = 0
+    for letter in word: 
+        if letter == vocal:
+            times += 1
+    print("The vocal " + vocal + " is " + str(times) + " times")
+
+
+"""Exercise 10
+write a program keep the following prices 50, 75, 46, 22, 80, 65, 8 and show them the biggest and the smaller price"""
+
+prices = [50, 75, 46, 22, 80, 65, 8]
+prices.sort()
+print(f"The lowest value is: {prices[0]}")
+prices.sort(reverse= True)
+print(f"The biggest value is: {prices[0]}")
+
+
+"""Exercise 11
+Write a program that keep the vectors (1,2,3) y (-1,0,2) in two lists and soft out the Scalar product""" 
+#Mine
+vector1 = (1,2,3)
+vector2 = (-1,0,2)
+scalar_product = vector1[0]*vector2[0] + vector1[1]*vector2[1]+ vector1[2]* vector2[2]
+print(scalar_product)
+
+#not mine
+a = (1, 2, 3)
+b = (-1, 0, 2)
+product = 0
+for i in range(len(a)):
+    product += a[i]*b[i]
+print("the products  of the vectors" + str(a) + " y " + str(b) + " es " + str(product)) 

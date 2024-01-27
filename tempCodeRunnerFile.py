@@ -1,8 +1,7 @@
 
-not_together_numbers = []
-
-for i in range(1,11):
-  not_together_numbers.append(i)
-
-not_together_numbers.sort(reverse=True)
-print(not_together_numbers)
+a = (1, 2, 3)
+b = (-1, 0, 2)
+product = 0
+for i in range(len(a)):
+    product += a[i]*b[i]
+print("the products  of the vectors" + str(a) + " y " + str(b) + " es " + str(product)) 
