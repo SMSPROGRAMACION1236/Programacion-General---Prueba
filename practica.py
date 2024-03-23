@@ -212,7 +212,7 @@ print(ceu_es)
 Ask the price of something in euros with two decimals and return the number of euros and decimals entered"""
 
 euro= input("Enter the prize: ")
-parts = euro.split(".")
+parts = euro(".")
 
 print(f"It's cost {parts[0]} euros, and {parts[1]} coins")
 
@@ -450,12 +450,12 @@ num_back = int(input("Enter a positive number"))
 
 """Exercise 5
 Write a program ask the quantity to income, the income in year the numbers of years, and show the capital had in the income each year during it"""
-amount = float(input("Quantity to income "))
+amount_times_paid = float(input("Quantity to income "))
 interest = float(input("¿faz of interest? "))
 years = int(input("Years?"))
 for i in range(years):
-    amount *= 1 + interest / 100 
-    print("Capital after " + str(i+1) + " years: " + str(round(amount, 2)))
+    amount_times_paid *= 1 + interest / 100 
+    print("Capital after " + str(i+1) + " years: " + str(round(amount_times_paid, 2)))
     # TODO: Complete by myself it
 
 
@@ -694,8 +694,451 @@ print(scalar_product)
 
 #not mine
 a = (1, 2, 3)
-b = (-1, 0, 2)
+b = (-1, 0, 2) 
 product = 0
 for i in range(len(a)):
     product += a[i]*b[i]
 print("the products  of the vectors" + str(a) + " y " + str(b) + " es " + str(product)) 
+
+
+"""Exercise 12
+Write a program that times two matrices, """
+import numpy as np
+
+first_matrix = np.array([[1,2,3],
+                [4,5,6]])
+second_matrix = np.array([[-1, 0],
+                [0,1],
+                [1,1]])
+result = np.dot(first_matrix, second_matrix)
+result = first_matrix @ second_matrix
+print(result)
+
+
+"""Exercise 13
+Write a program ask the sample of numbers, separated by comas, keep in some lists and show  its mean and standard deviation."""
+result = 0
+sample = []
+for i in range(5):
+  sample.append(int(input("Enter: ")))
+for i in sample:
+  result+= i
+print(result)
+
+mean = result / (len(sample))
+print("The mean is ", mean)
+
+
+deviation = 0
+
+for i in  (list(sample)):
+  deviation += (i-mean) ** 2
+
+standard = deviation /  len(sample)
+print(standard**0.5)
+
+
+### Dictionaries
+# https://aprendeconalf.es/docencia/python/ejercicios/diccionarios/
+
+"""Exercise 1
+Write a program that keep {'Euro':'€', 'Dollar':'$', 'Yen':'¥'} in a dictionary ask the user for a badge and show his symbol  or say that that badge is not there"""
+
+money = str(input("Enter: "))
+badge = {'Euro':'€', 'Dollar':'$', 'Yen':'¥'}
+if money.title() in badge.keys():
+  print(badge[money.title()])
+else:
+  print("It's not here")
+  
+"""Exercise 2
+Write a program asking the user's name age address and phone number and them shoe them in a print"""
+
+name = input("Your name: ")
+age = input("Enter the age: ")
+address = input("Your address: ")
+phone_number = input("Your phone number: ")
+
+personal_information = {"name": name, "age": age, "address": address, "phone number": phone_number}
+
+print(f"{personal_information['name']} is {personal_information['age']} years old and live in {personal_information['address']} and the phone number is {personal_information['phone number']}")
+
+"""Exercise 3
+Write a program that keep the prices of fruit, ask to the user for a fruit and its kilos , and show the price of the numbers of kilos of fruit, if the fruit isn't there, show a message"""
+
+
+fruits = {"Orange":0.70, "Banana":1.35, "Pear":0.85, "Apple":"0.80"}
+
+fruit = input("What fruit would you like: ").title()
+kilo = float(input("Enter the kilos of fruit: "))
+
+if fruit.title() in fruits.keys():
+  print(f"yes we have{fruit} and it'll cost {fruits[fruit] * kilo} € per kilo.")
+else:
+  print("we don't have it")
+"""Exercise 4
+Write a program that ask a date in the format dd/mm/aaaa  and show the data date but dd of <month> of aaaa, where <month> is the name of the month"""
+
+month = {1:"January", 2:"February", 3:"March", 4:"April", 5:"May", 6:"June", 7:"July", 8:"August", 9:"September", 10:"October", 11:"November", 12:"December"}
+
+date = (input("Enter a data in dd/m/aaaa: " ))
+date = date.split("/")
+print(date[0], 'of', month[int(date[1])], 'of', date[2])
+
+"""Exercise 5
+write a program that keep the credits of the subjects {"Math":6,"Physics":4,"Chemistry":5} and show each one, <subject> has <credits> credits, where <subject> is each subject and <credits> the number of credits and last sum all of them"""
+
+subjects = {"Math":6,"Physics":4,"Chemistry":5}
+
+
+for k, l in subjects.items():
+  print(f"{k} has: {l}")
+
+"""Exercise 6
+Write a program, with an empty dictionary and fill  with information about a person like name, sex, age, phone, email, etc, Each time the we add a new data we need to print it"""
+name =""
+age = ""
+sex = ""
+phone_number =""
+mail = ""
+identify = {"name":name, "age":age, "sex": sex, "phone_number":phone_number, "mail": mail}
+
+while True:
+
+  question = input("Add information(name/age/sex/phone_number/mail): ").lower()
+  if question  == "name":
+    identify["name"]= input("Type your name: ")
+    print(identify["name"])
+  elif  question == "age":
+    identify["age"]= input("Type your age: ")
+    print(identify["age"])
+  elif   question=="sex":
+    identify["sex"]= input("Type your sex: ")
+    print(identify["sex"])
+  elif question=="phone_number":
+    identify["phone_number"]= input("Type your phone number: ")
+    print(identify["phone_number"])
+  elif question== "mail":
+    identify["mail"]= input("Type your mail: ")
+    print(identify["mail"])
+  else:
+    break
+print(identify.items())
+## The good resolution
+person = {}
+continuing = True
+while continuing:
+    clave = input('¿What class of data do you want to? ')
+    valor = input(clave + ': ')
+    person[clave] = valor
+    print(person)
+    continuing = input('¿Do you like to add more information (Yes/Not)? ') == "Yes"
+
+"""Exercise 7
+Write a program, using a dictionary as a bag, the program need to ask the article and its price and add it  to the dictionary, until decide to end to buying, and the the we print the totally list with the total cost"""
+
+bag = {}
+pricing = 0
+following = True
+while following:
+  article = input("Type the name of the article: ")
+  price = (input(article +  " How much does it cost?:"))
+  bag[article] = price
+  pricing += int(price)
+  following =  input('¿Do you like to add more articles (Yes/Not)? ') == "Yes"
+print("Buying List")
+for article, price  in bag.items():
+  print(article,"\t", price)
+print("total",pricing)
+
+"""Exercise 8
+Write a program creating a dictionary of translator spanish-english, the user must type the words in spanish and english separated by : and each par of <word>:<translate> separated by comas, the program must create the dictionary with the words and the translations, late it must ask a phase in spanish and it'll use the dictionary to translate it, if the word isn't in the dictionary stop"""
+
+dictionary = {}
+word_for_dict = input("Enter a word: ")
+
+for i in word_for_dict(","):
+  key, value = i.split(":")
+  # print(key,value)
+  dictionary[key]=value
+# print(dictionary)
+
+phase = input("Enter a phase: ")
+
+for i in phase.split():
+  if i in dictionary:
+    print(dictionary[i],end=" ")
+  else:
+    print(i, end=" ")
+"""Exercise 9
+Write a program that management the slope bills of paid of a company, the bills will keep in a dictionary where the key of each bill will be the number of the bill and the value of the cost of the bill, the program must ask to the user if he wants to add a new bill, pay a existing one or to end it, if he wish to add a new one, ask for the number of the bill and its cost and it'll add to the dictionary, if he likes to pay it ask about the number of the bill, and it'll delate, later of ach operation the program must show by scream the amount had until this moment and the slope amount of the paying"""
+
+bills = {1:100,2:500,3:200}
+print(bills.keys())
+amount_times_paid = 0
+amount_paid = 0
+dont_pay_amount = 0
+bills = {1:100,2:500,3:200}
+print(bills.keys())
+amount_times_paid = 0
+amount_paid = 0
+dont_pay_amount = 0
+while True:
+  question = str(input("What would you like do to(add/pay): ")).lower()
+  if question == "add":
+    bill_key = int(input("Enter the value of the bill: "))
+    bill_value = int(input(f"The vale from {bill_key} is: "))
+    if bill_key in bills.keys():
+      print("It's exit, or would you like to pay: ")
+    else:
+      bills[bill_key] = bill_value
+      print(bills)
+  elif question =="pay":
+    bill_key = int(input("Enter the value of the bill: "))
+    value = bills.pop(bill_key)
+    print(bills)
+    amount_times_paid += 1
+    amount_paid += value
+    amount_of_bills = len(bills)
+    print(amount_times_paid)
+    print(amount_paid)
+    print(amount_of_bills)
+    print("f")
+    ## From here problems
+    dont_pay_amount = 0
+    for i in bills:
+      dont_pay_amount +=  bills.get(i,0)
+      print(f"hello{dont_pay_amount}")
+  else:
+    break
+"""Exercise 10
+write a program that let to management the database of clients in a company, the clients will be keep in a dictionary, and their keys will be their NIF and the value will be another dictionary with the data of client(name, address, phone number, mail, preferential where preferential will be true if it is a preferential client ) the program must ask to the user for one option of the menu: 1. Add client 2. Delete Client. 3. Show client, 4. List of clients, 5. list of preferential clients, 6. Finish
+Where
+1. Ask for the customer's data, create a dictionary with the data and add it to the database.
+2. Ask for the client's NIF and delete their data from the database.
+3. Ask for the client's NIF and show their data.
+4. Show a list of all clients in the database with their NIF and name.
+5. Show the list of preferred customers from the database with their NIF and name.
+6. Finish the program. """
+clients = {}
+option = ""
+while option !='6':
+  if option =="1":
+    nif = input("Enter your nif: ")
+    name =  str(input(f"Please enter your name: "))
+    address = str(input("Type your address: "))
+    phone_number =  int(input("Enter your phone number: "))
+    mail = str(input("Enter your mail: "))
+    preferential =  str(input("Are you a prefer(yes/no): ")).lower()
+    client = {"name": name, "address":address, "phone_number":phone_number,"mail":mail,"preferential":preferential =="yes"}
+    clients[nif] = client
+  elif option == "2":
+    nif = input("Enter your nif: ")
+    if nif in clients:
+      del clients[nif]
+      print("Deleted!")
+    else:
+      print("Not found.")
+  elif  option == '3':
+    nif = input("Enter your nif: ")
+    if nif in clients:
+      for key, value in clients[nif].items():
+        print(f"{key}: {value}")
+    else:
+      print("NIF not found.")
+  elif option == "4":
+    for key, value in clients.items():
+      print(key, value['name'])
+  elif  option == "5":
+    for key, value in clients.items():
+      if value['preferential']:
+          print(key, value['name'])
+  option = str(input("Enter the option(1/2/3/4/5/6): "))
+
+
+
+
+##https://aprendeconalf.es/docencia/python/ejercicios/funciones/
+
+"""Exercise 1
+Write a function that say Hello Friend"""
+
+def say_hello():
+  print("Hello Friend")
+say_hello()
+
+"""Exercise 2
+Write a function that pass it a name and print hello <name>"""
+
+def say_hello(name):
+  print(f"Hello: {name}")
+name = input("Enter your name")
+say_hello(name)
+
+"""Exercise 3
+Write a function that take a positive number and return its factorial"""
+
+
+def calculate_vectorial(n):
+  result = 1
+  if n == 0 or n == 1:
+    return result
+  else:
+    for i in range(1, n +1):
+      result = result * i
+    return result
+n  = int(input("Enter a positive number: "))
+while n  < 0:
+  n  = int(input("Enter "))
+"""Exercise 4
+Write a function that calculate the total of the bill after applied IVA, the function must receive the amount without IVA and the IVA to apply and return the total of the bill, if we don't give the IVA, we need to put 21% in default"""
+
+def calculate_bill(amount_without_iva, iva):
+  if iva == 0:
+    iva = 0.21 # 21%
+    bill = iva * amount_without_iva
+    total_bill = bill + amount_without_iva
+    return round(total_bill)
+  else:
+    iva  = (iva/100) * amount_without_iva
+    total_bill = (iva) + amount_without_iva
+    return round(total_bill)
+iva = int(input("Enter the IVA: "))
+amount_without_iva = int(input("Enter the amount: "))
+print(f"You'll pay: {calculate_bill(amount_without_iva, iva)}")
+
+"""Exercise 5
+Write a function that calculate the area of a circle and another to calculate the volume of a cylinder using the first function"""
+
+import math
+def calculate_circle_area(radius):
+  area = math.pi * (radius ** 2)
+  return round(area)
+
+def calculate_cylinder_area(high, radius):
+    base_area = calculate_circle_area(radius)
+    volume = base_area * high
+    return volume
+radium = int(input("Enter the radium: "))
+hight = int(input("Enter the hight: "))
+
+print(f"The area of the circle is: {calculate_circle_area(radium)} and the volume of the cylinder is: {calculate_cylinder_area(radium, hight)}")
+
+"""Exercise 6
+Write a function that show numbers in a list and return the medium"""
+numbers =[]
+
+def medium(numbers):
+  adding = 0
+  dimension  = int(input("Enter the dimension of the list: "))
+  for l in range(dimension):
+    numbers.append(int(input("Type the winner numbers: ")))
+  for i in numbers:
+    adding += i
+  result = adding  / len(numbers)
+  return result
+print(medium(numbers))
+
+"""Exercise7
+Write a function that receive some numbers in a list and return another list with its squares. """
+
+sample =[1, 4, 6]
+final_sample = []
+def calculate_squares_sample(sample):
+  for n in sample:
+    final_sample.append(n **2)
+  return final_sample
+print(calculate_squares_sample(sample))
+
+"""Exercise  8
+Write a function that takes a sample of numbers in a list and returns a dictionary with their mean, variance, and standard deviation."""
+
+numbers = []
+adding = 0
+dimension  = int(input("Enter the dimension of the list: "))
+for l in range(dimension):
+  numbers.append(int(input("Type the winner numbers: ")))
+
+def operations(numbers):
+  adding = 0
+  for i in numbers:
+    adding += i
+  mean = adding  / len(numbers)
+  return  mean
+#Another thing
+
+def variance_total(numbers, variance = 0):
+  # variance = 0
+  mean =  (operations(numbers))
+  for i in numbers:
+    variance +=  (i - mean )**2
+  variance_final = variance / (len(numbers) -1)
+  return variance_final
+def standard_deviation(numbers):
+  square = variance_total(numbers)
+  deviation = square ** 0.5
+  return deviation
+print(f"The mean is: {operations(numbers)}")
+print(f"The variance is: {variance_total(numbers)}")
+print(f"The standard deviation is: {standard_deviation(numbers)}")
+
+"""Exercise
+9 Write a program that calculate the MCD and MCM."""
+
+def MCD(a, b):
+  while b:
+    a, b = b, a % b
+  return a
+
+def MCM(a, b):
+  return a * b // MCD(a, b )
+
+a = int(input("Enter a number: "))
+b = int(input("Enter a number: "))
+
+print(f"The MCD is: {MCD(a, b)}")
+print(f"The MCM is: {MCM(a, b)}")
+
+"""Exercise 10
+Write  a program that become a decimal number to bin number and the opposite"""
+
+def decimal_to_bin(number:int):
+  binary = bin(number)
+  return binary
+
+def bin_to_decimal(number_bin:bin):
+  decimal = int(number_bin, 2)
+  return decimal
+
+number = int(input("Enter a number: "))
+number_bin = str(input("Enter a number: "))
+
+print(f"From Decimal to Binary is: {decimal_to_bin(number)}")
+print(f"From Binary to Decimal is: {bin_to_decimal(number_bin)}")
+
+"""Exercise 11
+Write a program that receive a string and return a dictionary with each word that have, and its frequency. Write another function that receive the dictionary done with the last function and return a tuple with the most used word and its frequency"""
+
+def pre_dict(words):
+  exclamation = {}
+  for i in words.split():
+    exclamation[i] = exclamation.get(i, 0) +1
+  return exclamation
+words = input("Enter: ")
+print(pre_dict(words))
+
+
+def dict_to_tuple(words):
+  dictionary = pre_dict(words)
+  key_max = max(dictionary, key=lambda k:dictionary[k])
+  value_max = dictionary[key_max]
+  finally_tuple = (key_max, value_max)
+  return finally_tuple
+print(dict_to_tuple(words))
+
+
+#https://aprendeconalf.es/docencia/python/ejercicios/programacion-funcional/
+
+"""Exercise 1
+Write a function that applies a discount to a price and another that applies VAT to a price. Write a third function that receives a dictionary with the prices and percentages of a shopping basket, and one of the previous functions, and uses the passed function to apply the discounts or VAT to the products in the basket and return the final price from the basket."""
+
