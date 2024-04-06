@@ -248,10 +248,10 @@ Ask about the name of a product, its price and the number of units and print a s
 product_name = str(input("Enter the product name: "))
 
 many = input(f"How many of {product_name} do you like: ")
-many = int(many) 
+many = int(many)
 each_unit = input("Enter the unit prize: ")
 each_unit = int(each_unit)
-total_many = many * each_unit 
+total_many = many * each_unit
 
 each_unit = "{:.2f}".format(each_unit)
 each_unit = each_unit.zfill(11)
@@ -259,7 +259,7 @@ each_unit = each_unit.zfill(11)
 total_many = "{:.2f}".format(float(total_many))
 total_many = total_many.zfill(11)
 
-many = str(many) 
+many = str(many)
 many = many.zfill(3)
 print(f"You'll buy: {product_name} you'll have: {many} units that each one cost: {each_unit} dollars, totally is going to be: {total_many}")
 
@@ -297,8 +297,8 @@ if n2 == 0:
   print("Error")
 else:
   print(int(n1 /n2))
-  
-  
+
+
 """Exercise 4
 ask the user a number a check if it is pair or the opposite"""
 
@@ -359,7 +359,7 @@ In a company the clerks have been checked, everyone has points it started in 0.0
 
 point = float(input("Enter your points: "))
 
-quantity_of_money = 2400 
+quantity_of_money = 2400
 unaccepted =  0.0
 accepted = 0.4
 too_good = 0.6
@@ -376,7 +376,7 @@ elif point >= too_good:
   print(f"you are in level: {level} and you'll earn: {point * quantity_of_money}")
 else:
   print("try again")
-  
+
 """
 Exercise 9
 A company that is has a playground needs to calculate the price it must sell to enter there, it need to ask the age of the client and show the price of the entering. if the client is lower than 4 years can enter free, if it has between 4 and 18 years old must pay 5$ and if it is older than 18 years it'll pay 10$"""
@@ -413,7 +413,7 @@ word_loop = str(input("Enter a word: "))
 for i in range(10):
   print(word_loop)
 
-"""Exercise 2 
+"""Exercise 2
 Ask the user his age and show all the ages he has been(from year 1)"""
 
 
@@ -454,7 +454,7 @@ amount_times_paid = float(input("Quantity to income "))
 interest = float(input("¿faz of interest? "))
 years = int(input("Years?"))
 for i in range(years):
-    amount_times_paid *= 1 + interest / 100 
+    amount_times_paid *= 1 + interest / 100
     print("Capital after " + str(i+1) + " years: " + str(round(amount_times_paid, 2)))
     # TODO: Complete by myself it
 
@@ -505,7 +505,7 @@ user_password = str(input("Type your password: "))
 while user_password != loop_password:
   print("Your password is incorrect")
   user_password = str(input("Type your password: "))
-  
+
 else:
   print("Your password is correct")
 
@@ -529,7 +529,7 @@ else:
     print("It's prime")
   else:
     print("It's not prime")
-    
+
 """Exercise 11
 Write a program that print the letters of the given string but reverse the  letters
 
@@ -574,12 +574,12 @@ keep the topics like the first one, but print I study <topic> where it the varia
 subjects = ["math", "physic", "chemistry", "history", "literature"]
 for subject in subjects:
   print(f"I study: {subject}")
-  
-  
+
+
 """Exercise 3
 Write a program that keep the same subjects, ask the user the note he/she take in each subject and show In<subject> you have taken <grade>"""
 
-while True: 
+while True:
   subjects = ["math", "physic", "chemistry", "history", "literature"]
   for subject in subjects:
     grades = int(input(f"How is your grade in {subject}: "))
@@ -662,13 +662,13 @@ o = word.count(letters[15])
 u = word.count(letters[21])
 
 print(f"The letter a with {a} repetitions, letter e with {e} repetitions, letter i with {i} repetitions, letter p with {o} repetitions and letter u with {u} repetitions")
-#The best solution 
+#The best solution
 
 word = input("Type a word: ")
 vocals = ['a', 'e', 'i', 'o', 'u']
-for vocal in vocals: 
+for vocal in vocals:
     times = 0
-    for letter in word: 
+    for letter in word:
         if letter == vocal:
             times += 1
     print("The vocal " + vocal + " is " + str(times) + " times")
@@ -685,7 +685,7 @@ print(f"The biggest value is: {prices[0]}")
 
 
 """Exercise 11
-Write a program that keep the vectors (1,2,3) y (-1,0,2) in two lists and soft out the Scalar product""" 
+Write a program that keep the vectors (1,2,3) y (-1,0,2) in two lists and soft out the Scalar product"""
 #Mine
 vector1 = (1,2,3)
 vector2 = (-1,0,2)
@@ -694,11 +694,11 @@ print(scalar_product)
 
 #not mine
 a = (1, 2, 3)
-b = (-1, 0, 2) 
+b = (-1, 0, 2)
 product = 0
 for i in range(len(a)):
     product += a[i]*b[i]
-print("the products  of the vectors" + str(a) + " y " + str(b) + " es " + str(product)) 
+print("the products  of the vectors" + str(a) + " y " + str(b) + " es " + str(product))
 
 
 """Exercise 12
@@ -750,7 +750,7 @@ if money.title() in badge.keys():
   print(badge[money.title()])
 else:
   print("It's not here")
-  
+
 """Exercise 2
 Write a program asking the user's name age address and phone number and them shoe them in a print"""
 
@@ -1141,4 +1141,71 @@ print(dict_to_tuple(words))
 
 """Exercise 1
 Write a function that applies a discount to a price and another that applies VAT to a price. Write a third function that receives a dictionary with the prices and percentages of a shopping basket, and one of the previous functions, and uses the passed function to apply the discounts or VAT to the products in the basket and return the final price from the basket."""
+
+# origin_price = int(input("Enter the price: "))
+# percentage = int(input("Enter the percentage: "))
+# iva = int(input("Enter the iva: "))
+# print(discount(origin_price, percentage))
+# print(calculate_iva(origin_price, iva))
+
+def discount(origin_price, percentage):
+  return origin_price * (1 - percentage/100)
+
+def calculate_iva(origin_price,iva):
+  return origin_price * (1 + iva/100)
+
+original_basket = {"apple":2.5, "milk":1.0,"bread":0.8}
+def product_info(basket, function, option):
+  final_price = 0
+  for  price in basket.values():
+    modify_price = function(price, option)
+    final_price += modify_price
+  return final_price
+
+
+x = int(input("The percent of iva : " ))
+y = int(input("The percent of discount: "))
+price_with_discount = product_info(original_basket, discount ,y)
+price_with_iva = product_info(original_basket, calculate_iva,x)
+print(f"The total price with iva is: {round(price_with_iva)}")
+print(f"The total price with discount is: {round(price_with_discount)}")
+"""Exercise 2
+Write a function that simulates a scientific calculator that allows you to calculate the sine, cosine, tangent, exponential and natural logarithm. The function will ask the user for the value and the function to apply, and will display a table with the integers from 1 to the entered value and the result of applying the function to those integers."""
+import math as mt
+print(mt.sin(10))
+def sin(a):
+  return mt.sin(a)
+def  cos(a):
+  return mt.cos(a)
+  
+def  tan(a):
+  return mt.tan(a)
+def exp(a):
+  return mt.exp(a)
+def log(a):
+  return mt.log
+def options():
+  option = input("Enter the function (sin, cos, tan, exp, log)").lower()
+  numbers = 0
+  numbers_range_using_x = int(input("Enter the range of numbers: "))
+
+  match  option:
+    case  'sin':
+      for i in range(1, numbers_range_using_x +1):
+        print(f"The original number is{i} and the transformation is: {sin(i)}")
+    case "cos":
+      for i in range(1, numbers_range_using_x +1):
+        print(cos(i))
+    case "tan":
+      for i in range(1, numbers_range_using_x +1):
+        print(tan(i)) 
+    case "exp":
+      for i in range(1, numbers_range_using_x +1):
+        print(exp(i)) 
+    case  "log":
+      for i in range(1, numbers_range_using_x +1):
+        print(log(i)) 
+    case _:
+      print("No se puede")
+options()
 
