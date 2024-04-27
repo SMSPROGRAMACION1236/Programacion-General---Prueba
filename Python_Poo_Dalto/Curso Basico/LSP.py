@@ -4,7 +4,7 @@
 # class Bird:
 #   def __init__(self) -> None:
 #     return "I'm flying"
-  
+
 # class Penguin(Bird):
 #   def fly(self):
 #     return "I cannot fly"
