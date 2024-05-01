@@ -7,7 +7,7 @@ lyrics = 		"""	Quizás porque mi niñez
  Sigue jugando en tu playa
  Y escondido tras las cañas
  Duerme mi primer amor
- Llevo tu luz y tu olor
+ Llevo tu luz y tu olorb
  Por dondequiera que vaya			
 
 print("rio"in proverb1)"""
@@ -79,3 +79,23 @@ texting = """Hi Brenda, . Hi, Helen"""
 print(texting.replace("Hi", "hello", 1))  # To replace  Hi by hello 1 time
 
 print(text.swapcase())# The opposite of the letters
+
+print("anf".isnumeric()) # check if it is a numeric value
+print("Anf".islower())   # Check if all characters are title cased
+
+print(f"{text=}") # to print the variable and the value
+
+value = "hello"
+print(f"{value:03}") # print 003
+
+
+nul = not(None) # deny the none
+
+if nul is  None:
+  print("Wasaa")
+else:
+  print("Naa")
+
+
+print(bool({})) # It will return False because it has no elements
+
