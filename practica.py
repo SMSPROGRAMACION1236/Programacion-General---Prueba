@@ -8,9 +8,10 @@
 
 print("Hello World!")
 
-hello_world = "Hello World!"
+
 # Exercise 2
 # Create a variable it have a hello_world and then print it
+hello_world = "Hello World!"
 print(hello_world)
 
 """
@@ -1177,7 +1178,7 @@ def sin(a):
   return mt.sin(a)
 def  cos(a):
   return mt.cos(a)
-  
+
 def  tan(a):
   return mt.tan(a)
 def exp(a):
@@ -1198,14 +1199,187 @@ def options():
         print(cos(i))
     case "tan":
       for i in range(1, numbers_range_using_x +1):
-        print(tan(i)) 
+        print(tan(i))
     case "exp":
       for i in range(1, numbers_range_using_x +1):
-        print(exp(i)) 
+        print(exp(i))
     case  "log":
       for i in range(1, numbers_range_using_x +1):
-        print(log(i)) 
+        print(log(i))
     case _:
       print("No se puede")
 options()
 
+"""Exercise 3
+Write a function that receives another function and a list, and returns another list with the result of applying the given function to each of the elements in the list.."""
+
+def  multiply(num):
+  return num * 2
+numbers = [1,  5, 3]
+
+def multyply_list(multiply, numbers):
+  for i in numbers:
+    print(multiply(i))
+multyply_list(multiply, numbers)
+"""Exercise 4
+Write a function that takes another Boolean function and a list, and returns another list with the elements of the list that return True when the Boolean function is applied to them."""
+numbers = [1, 2, 5, 6, 8, 9, 10, 122, 14, 53, 56, 42, 63, 76, 27, 7, 258]
+numbers_after_boolean  = []
+def bolean(i):
+  if i %2 == 0:
+    return True
+  else:
+    return False
+
+def after_bolean(bolean):
+  for i in numbers:
+    if  bolean(i) == True:
+      numbers_after_boolean.append(i)
+  print(numbers_after_boolean)
+after_bolean(bolean)
+
+
+
+"""Exercise  5
+Write a function that receives a phrase and returns a dictionary with the words it contains and their length.
+"""
+
+
+def function():
+  my_dictionary = {}
+  phase = str(input("Enter a phase: "))
+
+  for i in phase.split():
+    word = i
+    lenght = len(i)
+    my_dictionary[word] = lenght
+  return my_dictionary
+
+print(function())
+
+"""Exercise 6
+Escribir una función reciba una lista de notas y devuelva la lista de calificaciones correspondientes a esas notas."""
+def grade(score):
+    if score < 5:
+        return 'SS'
+    elif score < 7:
+        return 'AP'
+    elif score < 9:
+        return 'NT'
+    elif score < 10:
+        return 'SB'
+    else:
+        return 'MH'
+
+def apply_grade(scores):
+
+
+    return list(map(grade, scores))
+
+print(apply_grade([6.5, 5, 3.4, 8.2, 2.1, 9.7, 10]))
+
+
+"""Exercise 7
+Escribir una función reciba un diccionario con las asignaturas y las notas de un alumno y devuelva otro diccionario con las asignaturas en mayúsculas y las calificaciones correspondientes a las notas."""
+"""clave = input('¿What class of data do you want to? ')
+    valor = input(clave + ': ')
+    person[clave] = valor
+    print(person)"""
+def grade(score):
+    if score < 5:
+        return 'SS'
+    elif score < 7:
+        return 'AP'
+    elif score < 9:
+        return 'NT'
+    elif score < 10:
+        return 'SB'
+    else:
+        return 'MH'
+
+
+
+new_topics = {}
+def notes():
+  topics ={"Math": 12, "Chemistry":23}
+  for i ,j in topics.items():
+    new_topics[i.upper()] = grade(j)
+  return new_topics
+print(notes())
+
+
+"""Exercise 8
+Escribir una función reciba un diccionario con las asignaturas y las notas de un alumno y devuelva otro diccionario con las asignaturas en mayúsculas y las calificaciones correspondientes a las notas aprobadas.
+"""
+
+def grade(score):
+    if score > 15 :
+        return 'SS'
+    elif score > 10 and score < 15:
+        return 'AP'
+    elif score > 5 and score < 10:
+        return 'NT'
+    elif score > 3 and score < 5:
+        return 'SB'
+    else:
+        return 'MH'
+scores = ["SS", "AP", "NT"]
+
+
+
+
+new_topics = {}
+def notes():
+  topics ={"Math": 12, "Chemistry":16}
+  for i ,j in topics.items():
+    if grade(j) in scores:
+      new_topics[i.upper()] = grade(j)
+  return new_topics
+print(notes())
+
+
+
+"""Exercise 9
+Escribir una función que calcule el módulo de un vector."""
+
+def vector(x,y,z):
+  return  (x**2 + y**2 + z**2) ** 0.5
+
+def calcultate_vector():
+  x = int(input("Enter a number: "))
+  y = int(input("Enter a number: "))
+  z = int(input("Enter a number: "))
+  return vector(x, y, z)
+print(calcultate_vector())
+
+"""Exercise 11
+Escribir una función que reciba una muestra de números y devuelva los valores atípicos, es decir, los valores cuya puntuación típica sea mayor que 3 o menor que -3. Nota: La puntuación típica de un valor se obtiene restando la media y dividiendo por la desviación típica de la muestra.d
+"""
+def calculate_mean(numbers) :
+  mean = 0
+  for i in numbers:
+    mean +=i
+  return  (mean/len(numbers))
+
+
+def variance_total(numbers):
+  variance = 0
+  mean = calculate_mean(numbers)
+  for i in numbers:
+    variance += (i-mean)**2
+  return (variance /(len(numbers ))-1)
+
+
+def desviation(numbers):
+  return  round((variance_total(numbers))**0.5,2)
+
+
+def atipic(numbers):
+  atipic_list =[]
+  for i in numbers:
+    if((i - calculate_mean(numbers))/desviation(numbers)) >3 or((i - calculate_mean(numbers))/desviation(numbers)) < -3:
+      atipic_list.append(i)
+  return( atipic_list)
+print(atipic([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1000]))
+
+print(None)
