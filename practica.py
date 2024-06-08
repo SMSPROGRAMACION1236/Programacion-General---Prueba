@@ -1351,6 +1351,49 @@ def calcultate_vector():
   z = int(input("Enter a number: "))
   return vector(x, y, z)
 print(calcultate_vector())
+"""Exercise 10
+Una inmobiliaria de una ciudad maneja una lista de inmuebles como la siguiente:
+
+[{'año': 2000, 'metros': 100, 'habitaciones': 3, 'garaje': True, 'zona': 'A'},
+{'año': 2012, 'metros': 60, 'habitaciones': 2, 'garaje': True, 'zona': 'B'},
+{'año': 1980, 'metros': 120, 'habitaciones': 4, 'garaje': False, 'zona': 'A'},
+{'año': 2005, 'metros': 75, 'habitaciones': 3, 'garaje': True, 'zona': 'B'},
+{'año': 2015, 'metros': 90, 'habitaciones': 2, 'garaje': False, 'zona': 'A'}]
+Construir una función que permita hacer búsqueda de inmuebles en función de un presupuesto dado. La función recibirá como entrada la lista de inmuebles y un precio, y devolverá otra lista con los inmuebles cuyo precio sea menor o igual que el dado. Los inmuebles de la lista que se devuelva deben incorporar un nuevo par a cada diccionario con el precio del inmueble, donde el precio de un inmueble se calcula con las siguiente fórmula en función de la zona:
+
+Zona A: precio = (metros * 1000 + habitaciones * 5000 + garaje * 15000) * (1-antiguedad/100)
+Zona B: precio = (metros * 1000 + habitaciones * 5000 + garaje * 15000) * (1-antiguedad/100) * 1.5"""
+inmuebles = [
+{'año': 2000, 'metros': 100, 'habitaciones': 3, 'garaje': True, 'zona': 'A'},
+{'año': 2012, 'metros': 60, 'habitaciones': 2, 'garaje': True, 'zona': 'B'},
+{'año': 1980, 'metros': 120, 'habitaciones': 4, 'garaje': False, 'zona': 'A'},
+{'año': 2005, 'metros': 75, 'habitaciones': 3, 'garaje': True, 'zona': 'B'},
+{'año': 2015, 'metros': 90, 'habitaciones': 2, 'garaje': False, 'zona': 'A'}]
+
+def look_feature(inmuebles, budget):
+  result = []
+  for i in inmuebles:
+    zone = i["zona"]
+    metres = i["metros"]
+    garage = i["garaje"]
+    rooms = i["habitaciones"]
+    year = i["año"]
+    used_years = 2024 - year
+    if zone =="A":
+      price = (metres * 1000 + rooms * 5000 + garage * 15000) * (1-used_years/100)
+    elif zone =="B":
+      price = (metres * 1000 + rooms * 5000 + garage * 15000) * (1-used_years/100) * 1.5
+    if price <=budget:
+      i["precio"] = price
+      result.append(i)
+  return result
+budget = 100000000
+    
+print(look_feature(inmuebles,budget))
+    
+      
+      
+  
 
 """Exercise 11
 Escribir una función que reciba una muestra de números y devuelva los valores atípicos, es decir, los valores cuya puntuación típica sea mayor que 3 o menor que -3. Nota: La puntuación típica de un valor se obtiene restando la media y dividiendo por la desviación típica de la muestra.d
@@ -1360,7 +1403,6 @@ def calculate_mean(numbers) :
   for i in numbers:
     mean +=i
   return  (mean/len(numbers))
-
 
 def variance_total(numbers):
   variance = 0
@@ -1382,4 +1424,110 @@ def atipic(numbers):
   return( atipic_list)
 print(atipic([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1000]))
 
-print(None)
+
+
+# Ejercicios de Depuracion
+#https://aprendeconalf.es/docencia/python/ejercicios/depuracion/
+
+"""Exercise 1
+Corregir los errores sintacticos del siguiente programa:
+contraseña = input('Introduce la contraseña: ")
+if contraseña in ['sesamo'):
+  print('Pasa')
+else
+  print('No pasa')
+  """
+contraseña = input('Introduce la contraseña: ')
+if contraseña in ['sesamo']:
+  print('Pasa')
+else:
+  print('No pasa')
+
+
+"""Exercise 2
+Detectar y corregir los errores del siguiente programa que aplica iva a una factura
+base = input('Introduce la base imponible de la factura: ')
+print(aplica_iva(base, iva))
+
+def aplica_iva(base, iva = 21):
+    base = base * iva
+    return base
+
+"""
+base = float(input('Introduce la base imponible de la factura: '))
+
+
+def aplica_iva(base, iva):
+    recept = (base) * (iva/100)
+    return recept + base
+print(aplica_iva(base, iva=21))
+
+"""Exercise 3
+Detectar y corregir los errores del siguiente programa que calcula el producto escalar de dos vectores:"""
+
+u = [1, 2, 3]
+v = [4, 5, 6]
+def producto_escalar(u, v):
+    for i in range(len(u)):
+         u[i] *= v[i]
+    return sum(u)
+print(producto_escalar(u,v))
+"""Exercise 4
+Detectar y corregir los errores del siguiente programa que devuelve y elimina el teléfono de un listín telefónico a través del nombre del usuario:
+listin = {'Juan':123456789, 'Pedro':987654321}
+
+def elimina(listin, usuario):
+    del listin[usuario]
+    return listin[usuario]
+
+print(elimina(listin, 'Pablo'))"""
+listin = {'Juan':123456789, 'Pedro':987654321}
+
+def elimina(listin, usuario):
+    if usuario in listin:
+      del listin[usuario]
+    return listin
+
+print(elimina(listin, 'Juan'))
+"""Exercise 5
+Detectar y corregir los errores del siguiente programa que multiplica dos matrices:
+a = ((1, 2, 3),
+    (3, 2, 1))
+b = ((1, 2),
+    (3, 4),
+    (5, 6))
+
+def producto(a, b):
+    producto = []
+    for i in range(len(b)):
+        fila = []
+        for j in range(len(a[0])):
+            suma = 0
+            for k in range(len(a[0]+1)):
+                suma += a[i][k] * b[k+1][j]
+            fila[j] = suma
+        producto[i] = tuple(fila)
+    return tuple(producto)
+
+print(producto(a, b))
+
+"""
+a = ((1, 2, 3),
+    (3, 2, 1))
+b = ((1, 2),
+    (3, 4),
+    (5, 6))
+
+def producto(a, b):
+    producto = []
+    for i in range(len(a)):
+        fila = []
+        for j in range(len(b[0])):
+            suma = 0
+            for k in range(len(a[0])):
+                suma += a[i][k] * b[k][j]
+            fila.append(suma)
+        producto.append(tuple(fila))
+    return tuple(producto)
+
+print(producto(a, b))
