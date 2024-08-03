@@ -18,10 +18,11 @@ print(my_list)
 
 
 
-
 """my_range = range(8)
 print(list(my_range))
 """
+hola  = lambda hola:hola
+print(hola("Que tal"))
 
 
 

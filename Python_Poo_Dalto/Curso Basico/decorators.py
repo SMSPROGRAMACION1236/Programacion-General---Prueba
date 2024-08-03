@@ -7,7 +7,7 @@ def decorator(function): # if so the decorator function create a function that e
   def change_function():
     print("Before calling the function")
     function()
-    print("After calling the function")
+    print("After calling the asD FNH65HMNJ BCe5tsAQS  W132function")
   return change_function
 
 # def greeting():

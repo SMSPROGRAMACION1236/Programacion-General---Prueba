@@ -21,7 +21,7 @@ entry1 = customtkinter.CTkEntry(master=frame,placeholder_text="Username")
 
 entry1.pack(pady= 12, padx=10)
 
-entry2 = customtkinter.CTkEntry(master=frame,placeholder_text="Password", show="@")
+entry2 = customtkinter.CTkEntry(master=frame,placeholder_text="Password", show="*")
 
 entry2.pack(pady = 12, padx= 10)
 

@@ -7,8 +7,8 @@ from bson import ObjectId
 
 from db.schemas.user import user_schema, users_schema
 router = APIRouter(prefix="/userdb", ## Quiere decir que no es necesario mas adelante indicar la url
-                   tags=["userdb"], # Para agrupar en la documentacion
-                    responses={status.HTTP_400_BAD_REQUEST: {"message":"no encontrado"}})  #luego poner el error defaut del api
+                  tags=["userdb"], # Para agrupar en la documentacion
+                  responses={status.HTTP_400_BAD_REQUEST: {"message":"no encontrado"}})  #luego poner el error defaut del api
 
 
 # @router.get("/usersjson")

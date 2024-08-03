@@ -38,6 +38,3 @@ print(name)
 lastname.set_name("John") #Changing the namae
 name = lastname.get_name()
 print(name)
-
-
-2:2
