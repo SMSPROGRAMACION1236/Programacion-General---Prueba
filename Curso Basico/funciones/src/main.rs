@@ -29,4 +29,4 @@ fn sumar(num1:i32, num2:i32) ->i32  // decir que clase de datos nos tiene que re
 {
 
     num1 + num2  // no lleva ;
-}
+}b

@@ -13,6 +13,6 @@ fn main(){
       let _variableu32:i32=123456;
       let _variableu64:i64=123456789;
       let _variablesize: isize=1235;
-
+  
 
 }

@@ -2,12 +2,26 @@
 
 
 fn main() {
+  println!("First Exercise");
   price();
+  println!("Second Exercise");
   three_employees_salary();
-
+  println!("Third Exercise");
   guarany_to_dollar();
+  println!("Fourth Exercise");
   dollar_to_guarany();
-  salary_per_hour()
+  println!("Fifth Exercise");
+  salary_per_hour();
+  println!("Sixth Exercise");
+  sum_two_values_divided_by_one_value();
+  println!("Seventh Exercise");
+  salary_increased();
+  println!("Eighth Exercise");
+  basic_arithmetic_operation();
+  println!("Nineth Exercise");
+  earn_30percentage();
+  println!("Tenth Exercise");
+  total_invest();
 }
 
 fn price () {
@@ -53,4 +67,61 @@ fn salary_per_hour() {
     let money_per_hour :i64 = 1000;
     let salary :i64 = working_hours * money_per_hour;
     println!("El salario total es: {}", salary)
+}
+
+fn sum_two_values_divided_by_one_value() {
+    let num1 :f64 = 4.0;
+    let num2 :f64 = 2.0;
+    let num3 :f64 = 2.0;
+
+    let result_after_adding_and_divided:f64 = (num1+ num2) / num3 ;
+    println!("The result after adding the first and second value and divided by the third value is: {}",result_after_adding_and_divided);
+}
+
+fn salary_increased() {
+  let base_salary :f64 = 10000.0;
+  let percentage:f64 = 1.25;
+
+  let final_salary: f64 = base_salary * percentage;
+
+  println!("The salary after increased 25% is: {}",final_salary)
+}
+
+
+fn basic_arithmetic_operation() {
+
+  let value1 :f64 = 5.0;
+  let value2:f64 = 3.0;
+
+  let add: f64 = value1 + value2;
+  let subtract: f64 = value1 - value2;
+  let multiply: f64 = value1 * value2;
+  let divide: f64 = value1 / value2;
+
+  println!("The adding of the two values is: {}",add);    
+  println!("The subytract of the two values is: {}",subtract);    
+  println!("The multiply of the two values is: {}",multiply);    
+  println!("The divide of the two values is: {}",divide);    
+}
+
+fn earn_30percentage(){
+  let buying_price :f64 = 10000.0;
+  let selling_price:f64 = buying_price *1.3;
+
+  println!("He must sell it with a price of: {}",selling_price);
+
+}
+
+fn total_invest() {
+  let person1 :f64 = 100.0;
+  let person2 :f64 = 80.0;
+  let person3 :f64 = 120.0;
+  let total_invested :f64 = person1 + person2 + person3;
+  let person1_percent :f64 = (person1 /total_invested) *100.0;
+  let person2_percent :f64 = (person2 /total_invested) *100.0;
+  let person3_percent :f64 = (person3 /total_invested) *100.0;
+
+  println!("The person number 1 has invested: {} percentage",person1_percent);
+  println!("The person number 2 has invested: {} percentage",person2_percent);
+  println!("The person number 3 has invested: {} percentage",person3_percent);
 }
