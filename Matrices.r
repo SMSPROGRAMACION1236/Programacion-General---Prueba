@@ -19,7 +19,7 @@ ncol(C) # Numero de Columnas
 ncol(mtcars) # Numero de Columnas
 
 
-dim(A) # Dimension renglones y columnas
+dim(A) # Dimension  y columnas
 
 ## Operaciones
 

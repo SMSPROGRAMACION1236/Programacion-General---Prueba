@@ -49,7 +49,6 @@ if (is.character(y)) {
   print("No es cadena")
 }
 
-
 ## ifelse
 
 
