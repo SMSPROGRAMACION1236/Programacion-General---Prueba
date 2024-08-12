@@ -1,0 +1,1 @@
+C:\Users\santi\Programación\Hello\ Rust\alojamiento_de_memoria_y_strings\target\debug\alojamiento_de_memoria_y_strings.exe: C:\Users\santi\Programación\Hello\ Rust\alojamiento_de_memoria_y_strings\src\main.rs

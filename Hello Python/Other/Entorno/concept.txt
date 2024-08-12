@@ -1,0 +1,24 @@
+Es como si tuvieramos un sistema emulado y separado del principal
+Aislando del resto del sistema y asi evitar problemas de dependencia
+
+
+Al ejecutar pip list retornara todo lo que esta de forma general en la computadora
+
+
+Usando
+virtualenv -p python3 env  # en donde env es el nombre que utilizaremos para el entorno y tambien debemos elegir la version de python
+
+Para activar el entorno, debemos de ir al script de activate y ejecutarlo en la terminal por ejemplo:
+.\env\Scripts\activate
+
+
+Dentro podemos instalar librerias y frameworks que solo estaran alli, usando pip
+
+
+Para desactivarlo, simplemente ponemos deactivate
+
+Podemos importar en requiremnts.txt los modulos del entorno fuera del entorno
+
+Asi desde otro lugar instalar todos los paquetes de uno, desde el requirements.txt
+
+pip install -r  <n> en donde n es el nombre del archivo en este caso requirements.txt
