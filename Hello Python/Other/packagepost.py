@@ -1,6 +1,6 @@
 """ Luego de crear los archivos con funcionalidades y tener el __init__.py, ya podemos importarlo"""
 
-#* importacion desde un packete
+#* importacion desde un paquete
 from package.packagepre import middle ## para usar esta forma, la carpeta package y sus modulos no debe de estar en el mismo lugar que packagepost , tambbien podemos poner un alias con as
 print(middle([1,2,2]))
 

@@ -18,4 +18,4 @@ print('Hola  "{}" tienes {}'.format(nombre, edad))
 print('Hola  "{nombre}" tienes {edad}'.format(nombre=nombre, edad=edad))
 #* F-strings
 
-print(f'Hola  "{nombre}" tienes {edad}',)
+print(f'Hola  "{nombre}" tienes {edad}')
