@@ -1,0 +1,9 @@
+The software need to have good practices, it'll be reused, and can use in another codes, good variables, and need to expand without changing the functional
+
+### SOLID###
+S= Sole Responsibility Principle
+each class have a functionality just one and it can do something without another classes
+O= Open/Closed Principle
+L = Liskov's substitution principle
+I = Interfax Segregation Principle
+D = Dependency Reversal Principle
