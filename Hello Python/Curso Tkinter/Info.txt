@@ -1,0 +1,9 @@
+Tkinter: Es una libreria que te  permite crear interfaces de  usuarios de forma rapida y sencilla
+Es una libreria perfecta para principiantes que desean agregar elementos visuales a sus proyectos en python
+
+
+
+un boton es un objeto que presionas para que haga algo
+
+
+entry: es un espacio para que el usuario escriba algo por pantalla y lo puedas guardar

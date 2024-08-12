@@ -1,0 +1,6 @@
+Mi nombre es Santiago
+Mi apellido es Sanabria
+Mi edad es 15 años
+Mi Language favorito es PythonAuque me gusta tambien Rust Auqnue me gusta tambien Rust
+Auque me gusta tambien Rust
+Auque me gusta tambien Rust
