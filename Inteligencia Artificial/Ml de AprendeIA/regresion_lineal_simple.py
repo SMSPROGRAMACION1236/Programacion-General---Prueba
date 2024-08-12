@@ -1,10 +1,11 @@
 # we import the libraries that we'll use
-
+"""Numpy, we're going to use because we need to work with numerical information"""
 import numpy as np
 from sklearn import datasets, linear_model # datasets is the database we're use
 import matplotlib.pyplot as plt
 
-# Import the date
+# Import the data
+"""This dataset, calling boston, we're going to use to train the model"""
 boston = datasets.load_boston()
 print(boston)
 print()
@@ -29,11 +30,16 @@ print("Columns names")
 print(boston.feature_names)
 
 ## We prepare the data to do the linear regression
-### We select just the column 5
+### We select just the column 6
 X = boston.data[:,np.newaxis, 5]
+print("X data")
+print(X)
+print(X.ndim)
 
 ### We define the data to the labels
 y = boston.target
+print("Y Data")
+print(y)
 ## We put graphic of the data maybe using matplotlib
 plt.scatter(X, y)
 plt.xlabel("Numbers of rooms")
@@ -71,9 +77,8 @@ print()
 print("Value of the quotient 'a'")
 print(lr.coef_)
 #Calculate the "B" Value
-print("The value of the quotient 'a'")
+print("The value of the quotient 'b'")
 print(lr.intercept_)
-
 
 
 # We build the equation
