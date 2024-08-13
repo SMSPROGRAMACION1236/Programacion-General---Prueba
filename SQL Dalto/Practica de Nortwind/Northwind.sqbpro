@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/santi/Programación/SQL Dalto/Northwind/Northwind.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure pragmas browser query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="125"/><column_width id="3" width="2735"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,10:mainCategories"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Categories" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="117"/><column index="2" value="145"/><column index="3" value="300"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="Joins.sql">---- JOINS----
+-- We use two or more tables and mixed them\
+--- types of them---
+
+-- CROSS join
+
+SELECT * FROM Employees as e , Orders as o
+WHERE e.EmployeeID = o.EmployeeID;
+
+
+
+-- INNER JOIN
+SELECT FirstName, LastName, OrderID FROM Employees as e
+INNER JOIN Orders as o ON e.EmployeeID = o.EmployeeID;
+
+
+--We're going to create a TABLE
+-- 
+-- CREATE TABLE &quot;Rewards&quot;(  -- The name of the table
+-- &quot;RewardID&quot; INTEGER,
+-- &quot;EmployeeID&quot; INTEGER,
+-- &quot;Reward&quot; INTEGER,
+-- &quot;Month&quot; TEXT,
+-- PRIMARY KEY(&quot;RewardID&quot; AUTOINCREMENT); -- reference to the RewardID;
+-- -- We're going to INSERT DATA
+
+-- INSERT INTO Rewards(EmployeeID, Reward, Month) VALUES
+-- (3, 200, &quot;January&quot;),
+-- (2, 180,&quot;February&quot;),
+-- (5, 250, &quot;March&quot;),
+-- (1, 280, &quot;April&quot;),
+-- (8, 160, &quot;June&quot;),
+-- (NULL, NULL, &quot;June&quot;);
+
+
+-- Return just the people who have won money or a Reward 
+
+SELECT FirstName, Reward, Month FROM Employees as e
+LEFT JOIN Rewards as r on e.EmployeeID = r.EmployeeID;
+
+
+-- LEFT JOIN show you from two TABLES, the total information of the first table  and a short information of the second table
+-- RIGHT JOIN is the oppositive
+
+-- in this case is like a RIGHT JOIN, WITHOUT especific the word RIGHT, is like a simulation, because in SQL Lite we can't use RIGHT
+SELECT FirstName, Reward, Month FROM Rewards as r
+LEFT JOIN Employees as e on e.EmployeeID = r.EmployeeID;
+
+-- FULL JOIN, is all the DATA, 
+-- This is a simulation fo FULL JOIN using UNION
+SELECT FirstName, Reward, Month FROM Employees as e
+LEFT JOIN Rewards as r on e.EmployeeID = r.EmployeeID
+UNION
+SELECT FirstName, Reward, Month FROM Rewards as r
+LEFT JOIN Employees as e on e.EmployeeID = r.EmployeeID;
+
+
+</sql><sql name="SQL 2">---- UNION , UNION ALL ----
+
+
+-- Union is to mix consults(the tables that return from the consults) with the same amount of columns and type of DATA
+
+
+SELECT FirstName, Reward, Month FROM Employees as e
+LEFT JOIN Rewards as r on e.EmployeeID = r.EmployeeID
+UNION ALL
+SELECT FirstName, Reward, Month FROM Rewards as r
+LEFT JOIN Employees as e on e.EmployeeID = r.EmployeeID;
+
+
+--- Cardinally ---
+--Types
+
+-- One to One(1:1)--
+-- One data to another data from different TABLES, example, a person with his ID
+-- One to a lot(1:n) --
+-- one data to a lot of datas from different TABLES, One to a lot of datas example, a writer with a lot of books
+-- A lot to a lot --
+-- A lot of data to alot data from different TABLES, example, one student can do many courses, and each course has many students too, we use a middle class to be more easy
+
+
+
+</sql><current_tab id="1"/></tab_sql></sqlb_project>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/santi/Programación/SQL Dalto/usuarios.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="125"/><column_width id="3" width="596"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,8:mainusuarios"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">-- Con esto consultamos para ver la informacion
+
+--SELECT * FROM usuarios  -- Seleccionar todo de la tabla usuario, 
+
+--INSERT INTO usuarios(nombre, apellido, edad) --Con esto podemos insertar datos
+-- para hacerlo con varios datos podemos hacerlo con comas
+ 
+/*VALUES	('Mario', 'Caballero', 19), 
+		('Juan', 'Arturo', 21),
+		('Lisa', 'Gonzales', 43),
+		('kevin', 'Amarilla', 9),
+		('Gerard', 'Nilon', 15)*/
+
+
+
+ 
+ SELECT * FROM usuarios</sql><current_tab id="0"/></tab_sql></sqlb_project>

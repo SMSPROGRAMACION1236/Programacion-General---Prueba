@@ -1,0 +1,11 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "driver": "SQLite",
+      "name": "MiBaseDeDatos",
+      "database": "${workspaceFolder:SQL Dalto}/Mi  Base de Datos/MiBaseDeDatos.db"
+    }
+  ],
+  "sqltools.useNodeRuntime": true
+}
