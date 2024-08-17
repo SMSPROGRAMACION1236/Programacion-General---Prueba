@@ -14,7 +14,6 @@ entrada.pack() # para ponerlo
 entrada.insert(1, "Texto por defecto") #  Poner algo por defecto
 
 
-
 def cambiar_texto():
     texto = entrada.get()
     etiqueta.config(text=texto) # Con lo introducido en el entry cambiamos el label
