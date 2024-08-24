@@ -9,3 +9,8 @@ un boton es un objeto que presionas para que haga algo
 entry: es un espacio para que el usuario escriba algo por pantalla y lo puedas guardar
 
 Los callbacks sirve para dar mas inteligencia a las funcionalidades
+
+
+Radiobutton: escoger una opcion
+Widget de Seleccion: Selecionar algo de una lista de elementos
+checkbutton: seleccionar mas de una opcion

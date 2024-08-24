@@ -6,7 +6,6 @@ ventana.title("Mi ventana")
 ventana.geometry("500x300")
 ventana.configure(bg="sky blue")  # color del fondo
 
-
 frame1 = tk.Frame(ventana)  # En donde el frame, en este caso aplicara a ventana
 frame1.configure(width=300, height=200, bg="red", bd=5)  # Dimensiones, color de fondo y borde de 5
 
