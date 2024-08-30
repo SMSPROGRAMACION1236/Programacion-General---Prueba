@@ -1,0 +1,61 @@
+/* El orden del CSS es muy importante */
+
+/* body {
+  color: tomato;
+} */
+/* Hay dos formas de implementar estilos a un h1, uno es nombrandolo directamente y el otro usando su id, mediante # */
+/* Sin ID */
+h1 {
+  color: tomato;
+}
+
+/* Con ID */
+
+#titulo {
+  color: tomato;
+}
+
+p {
+  color: blue;
+}
+/* Para indicar que usaremos una clase mediante .  y su nombre*/
+
+.Texto {
+  color: blue;
+}
+
+/* Para seleccionar aparte, en este caso solo aplicara estilos a los que tienen texto dentro del HTML */
+
+p.Texto{
+  color: brown;
+}
+
+/* En este ejemplo, vamos a asignar estilos solo a los p dentro de un div */
+
+div p {
+  color: violet;
+}
+/* Ahora lo mismo pero con h2 */
+
+div h2{
+  color: brown;
+}
+
+/* Para poner un estilo a dos o mas cosas se puede hacerL: */
+
+div h2, div h3{  /* selecciona solo los h2 y h3 dentro del div*/
+  color: red;
+}
+
+/** Para seleccionar todos los elementos  */
+
+* { /* Todito el documento tendra este tamaño de fuente mediante el uso del "*" */
+/*! Solo aplicara, si anteriormente no se ha declarado estilos para algo*/
+  font-size: 24px;
+  color: black;  /** en este caso no cambiara, puesto que anteriormente ya de definio los colores*/ 
+}
+
+
+
+
+
