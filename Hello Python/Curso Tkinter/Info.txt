@@ -14,3 +14,17 @@ Los callbacks sirve para dar mas inteligencia a las funcionalidades
 Radiobutton: escoger una opcion
 Widget de Seleccion: Selecionar algo de una lista de elementos
 checkbutton: seleccionar mas de una opcion
+
+Grid, pack y place son administradores de geometrias, nos permite colocar elementos en una ventana y poder redimencionarlo
+Pack: Es mas sencillo , te permite organizar elementos en bloques verticalemente o horizontalmente
+Grid: Es mas preciso, te permite organizar los elementos en filas y columnas como una tabla
+Place: Es el mas preciso de todos, te permite organizar los elementos en coordenadas especificas.
+
+
+Las variables de Control: nos permite mantener y gestionar los valores de los widgets, como campos de textos, botones, etc.
+Facilitan la comunicacion entre los widgets y el codigo de python
+
+StringVar: para cadenas de texto
+IntVar: Para numeros enteros
+DoubleVar: para numeros con decimales
+BooleanVar: para valores logicos
