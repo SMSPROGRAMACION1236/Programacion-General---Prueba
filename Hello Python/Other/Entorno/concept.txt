@@ -21,4 +21,4 @@ Podemos importar en requiremnts.txt los modulos del entorno fuera del entorno
 
 Asi desde otro lugar instalar todos los paquetes de uno, desde el requirements.txt
 
-pip install -r  <n> en donde n es el nombre del archivo en este caso requirements.txt
+pip install -r  <n> en donde n es el nombre del archivo en este caso requirements.txt 
