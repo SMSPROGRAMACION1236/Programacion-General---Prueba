@@ -18,7 +18,7 @@ checkbutton: seleccionar mas de una opcion
 Grid, pack y place son administradores de geometrias, nos permite colocar elementos en una ventana y poder redimencionarlo
 Pack: Es mas sencillo , te permite organizar elementos en bloques verticalemente o horizontalmente
 Grid: Es mas preciso, te permite organizar los elementos en filas y columnas como una tabla
-Place: Es el mas preciso de todos, te permite organizar los elementos en coordenadas especificas.
+Place: Es eAdl mas preciso de todos, te permite organizar los elementos en coordenadas especificas.
 
 
 Las variables de Control: nos permite mantener y gestionar los valores de los widgets, como campos de textos, botones, etc.
@@ -28,3 +28,11 @@ StringVar: para cadenas de texto
 IntVar: Para numeros enteros
 DoubleVar: para numeros con decimales
 BooleanVar: para valores logicos
+
+
+
+Menubutton: Boton que muestra un menu cuando se hace clic en el
+
+Menu: Barra de menu que se encuentra en la  parte superior de la ventana de la aplicacion
+
+Menus Contextuales: Menus que aparecen al hacer clic con el boton derecho del raton en un area especifica de la ventana

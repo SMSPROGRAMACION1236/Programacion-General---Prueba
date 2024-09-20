@@ -1,0 +1,13 @@
+Para ver la lista de atajos disponibles
+crl shift a
+
+Lives Templates, puedes crear uno, que ese una planilla de codigo
+
+Navigation de archivos en general
+crl shift n
+
+Para corregir el tema de los imports y paquetes
+en los atajos buscar optimize import
+
+Inserccion de lenguage
+alt enter
