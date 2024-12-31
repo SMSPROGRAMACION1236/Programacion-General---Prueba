@@ -1,0 +1,2 @@
+Estructura un sitio web simple:
+Crea un sitio web básico con una página de inicio, una página sobre ti y una página de contacto. Utiliza rutas relativas para enlazar entre las diferentes páginas.
