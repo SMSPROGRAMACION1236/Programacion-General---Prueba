@@ -36,6 +36,6 @@ top_employees = pd.read_sql_query(query2, conn)
 top_employees.plot(x="Employee", y=["total"], kind='bar', figsize= (10,5), legend=False)
 plt.title("Top 10 Employee Sales")
 plt.xlabel("Employees")
-plt.ylabel("Total sold"):
+plt.ylabel("Total sold")
 plt.xticks(rotation=45)
 plt.show()

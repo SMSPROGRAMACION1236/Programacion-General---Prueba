@@ -5,7 +5,7 @@ import pandas as pd
 ## In this case, the conexion closes in a auto way
 square = lambda n : n*n
 
-with sql.connect("C:/Users/santi/Programación/SQL Dalto/Northwind/Northwind.db") as conn:
+with sql.connect("C:/Users/santi/Programación/Programacion-General---Prueba/SQL Dalto/Practica de Nortwind/Northwind.db") as conn:
   conn.create_function("SQUARE", 1, square)
   cursor = conn.cursor()
   cursor.execute("""SELECT * FROM Products""")

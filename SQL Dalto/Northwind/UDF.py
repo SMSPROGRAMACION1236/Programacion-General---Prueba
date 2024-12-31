@@ -8,7 +8,7 @@ import pandas as pd
 ## First we need to create the function
 
 square = lambda n : n*n# Take n and it'll return us n*n
-conn = sqlite3.connect("C:/Users/santi/Programación/SQL Dalto/Northwind/Northwind.db"SELECT * FROM CustomersSELECT * FROM Customers) # To connect to the database
+conn = sqlite3.connect("C:/Users/santi/Programación/SQL Dalto/Northwind/Northwind.db" SELECT * FROM CustomersSELECT * FROM Customers) # To connect to the database
 
 ## Second we're going to put in SQL
 

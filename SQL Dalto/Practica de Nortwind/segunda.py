@@ -4,7 +4,7 @@ import sqlite3
 import pandas as pd
 
 # square = lambda n : n*n
-conn = sqlite3.connect("C:/Users/santi/Programación/SQL Dalto/Northwind/Northwind.db") 
+conn = sqlite3.connect("C:\\Users\\santi\\Programación\\Programacion-General---Prueba\\SQL Dalto\\Practica de Nortwind\\Northwind.db") 
 # conn.create_function('SQUARE', 1, square)
 
 courser = conn.cursor()

@@ -21,3 +21,4 @@
 BEGIN; -- to start it
 UPDATE Products SET ProductName = "VEV" WHERE ProductName = "mg"; 
 ROLLBACK;  -- I think this one is to go back 
+

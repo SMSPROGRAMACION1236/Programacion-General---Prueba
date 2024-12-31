@@ -13,7 +13,6 @@ WHERE e.EmployeeID = o.EmployeeID;
 SELECT FirstName, LastName, OrderID FROM Employees as e
 INNER JOIN Orders as o ON e.EmployeeID = o.EmployeeID;
 
-
 --We're going to create a TABLE
 -- 
 -- CREATE TABLE "Rewards"(  -- The name of the table
