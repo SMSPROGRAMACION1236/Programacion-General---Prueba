@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Wasa';  /* Nombre de la fuente(le podemos dar cualquiera */
+  src: url(static/FiraCode-Regular.ttf) format("truetype"); /* Ruta de la fuente */
+  /** Personalizacion*/
+  font-size:500 ;
+}

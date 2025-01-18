@@ -1,0 +1,16 @@
+h2{ /* Seleccionamos el elemento a ser modificado(selector)*/
+  color: red;
+  font-size: 50px;
+}
+/** Seleccionar por Elemento*/
+li{ 
+  color:red
+/** Seleccionar por clase*/
+}
+.ele1{ /* Seleccionamos la clase a ser modificada */
+  color:blue;
+}
+/** Seleccionar por ID*/
+#ele3{ /* Seleccionamos el id a ser modificado */
+  color: green;
+}

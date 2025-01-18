@@ -1,0 +1,22 @@
+p {
+  color: red;
+  font-family: Arial, Helvetica, sans-serif; /* Tipografia */
+  font-size:23px; /* Tamaño de la fuente */
+  font-weight: 900; /* Grosor de la fuente */
+  font-style: italic; /* Estilo de la fuente */
+  text-align: center; /* Alineacion del texto */
+  text-decoration: overline underline line-through; /* Decoracion del texto */
+  line-height: normal; /* Altura de la linea */
+  letter-spacing: 5 px; /* Espaciado entre letras */
+  text-transform:capitalize; /* Transformacion del texto */
+}
+/** Tipografia Externa*/
+
+b {
+  font-family: Fira Code;  /* Tipografia Externa extraida de Google Fonts */
+}
+
+h5 {
+  font-family: 'Wasa';  /* Tipografia Externa extraida de Google Fonts */
+  font-size: 500;
+}

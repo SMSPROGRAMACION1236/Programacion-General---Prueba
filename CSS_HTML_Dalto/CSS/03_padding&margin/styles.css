@@ -1,0 +1,11 @@
+.Formulario {
+  background-color: red;
+  padding-top: 10px; /* 10px de padding en la parte superior */
+  padding-right: 20px; /* 20px de padding en la parte derecha */
+  padding-bottom: 30px; /* 30px de padding en la parte inferior */
+  padding-left: 40px; /* 40px de padding en la parte izquierda */
+}
+.formulario_input {
+  background-color: blue;
+  padding: 10px; /* 10px de padding en todas las direcciones */
+}
