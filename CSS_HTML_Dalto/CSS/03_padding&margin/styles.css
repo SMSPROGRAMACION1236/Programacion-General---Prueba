@@ -8,4 +8,12 @@
 .formulario_input {
   background-color: blue;
   padding: 10px; /* 10px de padding en todas las direcciones */
+  width: 100%;
+}
+
+.submit_form {
+  color: green;
+  background-color: brown;
+  text-transform: uppercase;
+  margin-top: 50;
 }

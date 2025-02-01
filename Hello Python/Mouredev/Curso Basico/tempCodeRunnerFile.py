@@ -1,3 +1,1 @@
-def mayuscula(a:int):
-    return a.upper()
-print(mayuscula("hola"))
+print(5 is not 1)

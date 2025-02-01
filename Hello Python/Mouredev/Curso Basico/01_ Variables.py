@@ -6,7 +6,6 @@ my_bool_variable = True
 print(my_bool_variable)
 my_int_variable = 5
 print(my_int_variable)
- 
 
  # Concatenacion de variables con un print
 

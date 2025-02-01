@@ -1,0 +1,25 @@
+/* Selectores:
+
+Selecciona todos los párrafos:
+
+Crea un archivo HTML con varios párrafos.
+En tu archivo CSS, selecciona todos los párrafos (elementos <p>) y cámbialos a color azul.
+Selecciona todos los encabezados nivel 2:
+
+Crea un archivo HTML con encabezados de diferentes niveles.
+En tu archivo CSS, selecciona todos los encabezados nivel 2 (elementos <h2>) y hazlos más grandes.
+Selecciona todos los elementos con una clase específica:
+
+Asigna una clase a algunos elementos de tu HTML (por ejemplo, <p class="destacado">).
+En tu CSS, selecciona todos los elementos con esa clase y dales un fondo de color amarillo.*/
+
+
+p {
+  color: blue;
+}
+h2{
+  font-size:xx-large;
+}
+.destacado {
+  background-color: #ffff00;
+}

@@ -1,0 +1,16 @@
+/* Ejercicio combinado:
+
+Crea una tarjeta de presentación:
+Utiliza un encabezado para tu nombre.
+Utiliza un párrafo para tu descripción.
+Aplica diferentes estilos a cada elemento (colores, tamaños, fuentes) para crear una tarjeta atractiva.*/
+h1 {
+  color: aqua;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  ali;
+}
+p {
+  color:cadetblue;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/*! Falta aun completar */

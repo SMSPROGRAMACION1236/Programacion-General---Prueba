@@ -1,0 +1,25 @@
+/* Propiedades de texto:
+
+Cambia el color y el tamaño de la fuente:
+Selecciona un párrafo y cámbiale el color de la fuente a rojo y el tamaño a 24px.
+Aplica negrita y cursiva:
+Selecciona un encabezado y ponlo en negrita. Luego, selecciona otro párrafo y ponlo en cursiva.
+Añade espaciado entre líneas:
+Selecciona un bloque de texto y aumenta el espacio entre líneas para que sea más fácil de leer. */
+
+
+#parra1 {
+  color: red;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: bold;
+
+}
+
+#enca1 {
+  font-weight: bold;
+}
+#parra2 {
+  font-style: italic;
+  line-height: 2;
+}
