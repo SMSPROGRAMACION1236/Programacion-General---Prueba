@@ -1,6 +1,6 @@
 # We cannot instantiate it, is like a recipe or recipe, por example, everyone  will use the class Person, is like a model
 
-from abc import ABC, abstractclassmethod # it is decorate
+from abc import ABC, abstractclassmethod# it is decorate
 
 
 class Person(ABC):
