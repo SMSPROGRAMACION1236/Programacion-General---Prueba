@@ -27,12 +27,15 @@ ORDER by Worldwide DESC;
 
 -- Promedio de presupuestos
 /*Calcula el presupuesto promedio de las películas. Puedes usar la función AVG*/
-SELECT round(avg(Budget)) as average_budget FROM IMDB
+SELECT round(avg(Budget)) as average_budget FROM IMDB;
 
 -- Peliculas mas antigua
 /* selecciona las 10 peliculas mas antiguas de la base de datos*/
 
 -- No hay ninguna tabla o campo referente a la fecha
+
+
+PRAGMA table_info(genre);
 
 
 

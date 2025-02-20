@@ -1,0 +1,99 @@
+                    Tabla IMDB
+Movie_id: ID único para cada película.
+
+Title: Nombre de la película.
+
+Rating: Calificación promedio de la película.
+
+TotalVotes: Número total de votos recibidos.
+
+MetaCritic: Puntuación de la película según la web Metacritic.
+
+Budget: Presupuesto de la película (generalmente en dólares).
+
+Runtime: Duración de la pelícue votos para cada calificación del 10 al 1.
+
+CVotesMale: Número de votos de hombres.
+
+CVotesFemale: Número de votos de mujeres.
+
+CVotesU18: Número de votos de personas menores de 18 años.
+
+CVotesU18M: Número de votos de hombres menores de 18 años.
+
+CVotesU18F: Número de votos de mujeres menores de 18 años.
+la en minutos.
+
+CVotes10 - CVotes01: Número d
+CVotes1829: Número de votos de personas entre 18 y 29 años.
+
+CVotes1829M: Número de votos de hombres entre 18 y 29 años.
+
+CVotes1829F: Número de votos de mujeres entre 18 y 29 años.
+
+CVotes3044: Número de votos de personas entre 30 y 44 años.
+
+CVotes3044M: Número de votos de hombres entre 30 y 44 años.
+
+CVotes3044F: Número de votos de mujeres entre 30 y 44 años.
+
+CVotes45A: Número de votos de personas de 45 años o más.
+
+CVotes45AM: Número de votos de hombres de 45 años o más.
+
+CVotes45AF: Número de votos de mujeres de 45 años o más.
+
+CVotes1000: Número de votos de personas con al menos 1000 votos totales.
+
+CVotesUS: Número de votos de usuarios de Estados Unidos.
+
+CVotesnUS: Número de votos de usuarios de fuera de Estados Unidos.
+
+VotesM: Calificación promedio de los hombres.
+
+VotesF: Calificación promedio de las mujeres.
+
+VotesU18: Calificación promedio de personas menores de 18 años.
+
+VotesU18M: Calificación promedio de hombres menores de 18 años.
+
+VotesU18F: Calificación promedio de mujeres menores de 18 años.
+
+Votes1829: Calificación promedio de personas entre 18 y 29 años.
+
+Votes1829M: Calificación promedio de hombres entre 18 y 29 años.
+
+Votes1829F: Calificación promedio de mujeres entre 18 y 29 años.
+
+Votes3044: Calificación promedio de personas entre 30 y 44 años.
+
+Votes3044M: Calificación promedio de hombres entre 30 y 44 años.
+
+Votes3044F: Calificación promedio de mujeres entre 30 y 44 años.
+
+Votes45A: Calificación promedio de personas de 45 años o más.
+
+Votes45AM: Calificación promedio de hombres de 45 años o más.
+
+Votes45AF: Calificación promedio de mujeres de 45 años o más.
+
+VotesIMDB: Calificación promedio de la película en IMDb.
+
+Votes1000: Calificación promedio de personas con al menos 1000 votos totales.
+
+VotesUS: Calificación promedio de usuarios de Estados Unidos.
+
+VotesnUS: Calificación promedio de usuarios de fuera de Estados Unidos.
+
+                    Tabla Earning
+ 
+Movie_id: ID único para cada peea vinlícula, que será una clave principal y también una clave foránculada a la tabla IMDB.
+
+Domestic: Ingresos obtenidos de la película en el mercado doméstico (generalmente en dólares).
+
+Worldwide: Ingresos obtenidos de la película a nivel mundial (generalmente en dólares).
+
+                    Tabla: genre
+Movie_id: ID único para cada película, que será una clave principal y también una clave foránea vinculada a la tabla IMDB.
+
+genre: Género de la película (puede haber múltiples géneros para una misma película, por lo que podría haber múltiples filas para un mismo Movie_id).
