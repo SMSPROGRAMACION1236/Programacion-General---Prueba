@@ -1,0 +1,30 @@
+/* body {
+  
+
+} */
+#motivos {
+  color: red;
+}
+#h4_razones {
+  font-family: 'Times New Roman', Times, serif;
+  height: 20px;
+  width: auto;
+}
+
+h1 {
+  text-align: center;
+  background-image: url(image.png);
+  color:  red;
+  margin-bottom: 100PX;
+
+}
+.razones {
+  border-color: blue;
+  margin:  20px;
+  background-color: #9a9a9a;
+  box-sizing:content-box;
+}
+button {
+  text-align: center;
+  margin-left: 44%;
+}

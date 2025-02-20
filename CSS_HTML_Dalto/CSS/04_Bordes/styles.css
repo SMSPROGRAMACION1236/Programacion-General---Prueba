@@ -1,0 +1,22 @@
+div {
+  background-color: red;
+  width: 200px;
+  margin: auto;
+  text-align: center;
+}
+
+div{
+  border-width: 2x;
+  border-color: black;
+  border-style: solid;
+  border-radius:50%;
+  border: 3px solid black  /* Lo mismo pero en una misma lineal*/
+}
+
+p{
+  text-align: center;
+  background-color: blue;
+  border-top-left-radius: 10px;
+  border-top-left-width: 10px;
+
+}

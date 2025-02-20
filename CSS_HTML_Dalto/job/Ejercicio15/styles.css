@@ -1,0 +1,30 @@
+
+
+/* Crea un cuadro:
+
+Define un div y dale un ancho y alto específicos.
+Añade un borde sólido de color negro.
+Añade un relleno interno para separar el contenido del borde.
+Aplica un margen externo para crear espacio alrededor del cuadro. */
+div {
+  background-color: aqua;
+  width: 300px;
+  text-align: center;
+  height: 300px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: black;
+  margin: 12%;
+}
+
+#imagen_1 {
+  height: 250px;
+  width: 250px;
+  margin: 20px;
+  margin-bottom: 110px;
+}
+#imagen_2 {
+  height: 350px;
+  width: 250px;
+  margin: 20px;
+}

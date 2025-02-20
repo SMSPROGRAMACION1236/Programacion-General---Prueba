@@ -1,0 +1,39 @@
+/** RGB */
+
+.box_1 {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(120, 250, 250);
+  margin: 50px;
+}
+/** RBBA*/
+.box_2{
+  width: 100px;
+  height: 100px;
+  background-color: rgba(120, 250, 250,0.5);
+  margin: 50px;
+}
+/** HEX */
+.box_3{
+  width: 100px;
+  height: 100px;
+  background-color: #000000;
+  /* background-color: #000; */ /* Forma corta, cuando es un color puro */ 
+  margin: 50px;
+}
+
+/**   */
+
+.box_4 {
+  width: 100px;
+  height: 100px;
+  background-color: hsl(20, 60%, 40%);  /* Explicacion: */
+  /* hsl(Hue, Saturation, Lightness) */
+  /* Hue (matiz): 0 - 360 */
+  /* Saturation (saturacion): 0% - 100% */
+  /* Lightness (luminosidad): 0% - 100% */
+  margin: 50px;
+
+  /* background-color: #000; */ /* Forma corta, cuando es un color puro */ 
+  margin: 50px;
+}
