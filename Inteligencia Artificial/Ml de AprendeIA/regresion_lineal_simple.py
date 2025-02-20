@@ -4,6 +4,7 @@ import numpy as np
 from sklearn import datasets, linear_model # datasets is the database we're use
 import matplotlib.pyplot as plt
 
+
 # Import the data
 """This dataset, calling boston, we're going to use to train the model"""
 boston = datasets.load_boston()
@@ -68,7 +69,7 @@ plt.plot(X_test, Y_pred , color='red', linewidth = 3)
 plt.title("Simple Lineal Regression")
 plt.xlabel("Numbers of People")
 plt.ylabel("Medium Level")
-# print(plt.show())
+print(plt.show())
 
 print()
 # Calculate the "A"

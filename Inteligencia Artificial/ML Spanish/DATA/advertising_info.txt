@@ -1,0 +1,6 @@
+Es una base de datos como 5 columnas.
+Nos indica la cantidad gastada en publicidad en TV, Radio, Newspaper y asi obtener las ventas(Sales)
+
+
+El objetivo es descubrir caules son los medios de publicidad que mas producen dinero
+El siguiente objetivo es saber si agregamos mas presupuesto mayor sera las ganancias o Nos
