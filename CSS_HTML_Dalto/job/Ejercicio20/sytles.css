@@ -1,0 +1,30 @@
+.green_col {
+  height: 100px;
+  width: 100px;
+  background-color: #0f0;
+}
+.red_col {
+  height: 100px;
+  width: 100px;
+  background-color: #f00;
+}
+.blue_col {
+  height: 100px;
+  width: 100px;
+  background-color: #00f;
+}
+.yellow_col {
+  height: 100px;
+  width: 100px;
+  background-color: #ff0;
+}
+.pink_col {
+  height: 100px;
+  width: 100px;
+  background-color: #f0f;
+}
+.black_col {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(1, 1, 1);
+}

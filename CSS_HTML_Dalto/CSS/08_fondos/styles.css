@@ -1,0 +1,15 @@
+body {
+  background-color: green;
+}
+
+.box {
+  width:200px;
+  height: 200px;
+  margin: 20px;
+  background-color: #1111; /* Fondo rojo */
+  background-image: url("https://th.bing.com/th/id/OIP.5ry1qDh1wXXYLuhcXE2ExwHaEU?w=283&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7"); /* Este sirve para poner imagenes como fondo*/
+  background-size: cover ; /* Este sirve para que la imagen se ajuste al tamaño del contenedor(cover, contain, etc)  */
+  background-position: bottom; /* Este sirve para que la imagen se posicione en el centro del contenedor(right, left, top, botton */
+  background-repeat: no-repeat; /* Este sirve para que la imagen no se repita */
+  background-attachment: fixed; /* Este sirve para que la imagen no se mueva al hacer scroll */
+}

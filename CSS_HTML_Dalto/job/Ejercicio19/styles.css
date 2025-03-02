@@ -1,0 +1,31 @@
+.nombre {
+  width: 400px;
+  height: 120px;
+  color: brown;
+  background-color: aliceblue;
+  box-sizing: border-box;
+  text-align: center;
+  margin-left: 150px;
+}
+
+.comentario{
+  width: 400px;
+  height: 120px;
+  color: brown;
+  background-color: beige;
+  color: #211;
+  box-sizing:border-box;
+  text-align: center;
+  margin-left: 150px
+}
+
+.class_submit {
+  text-align: center;
+  background-color: #9992;
+}
+#submit {
+  height: 50px;
+  width: 100px;
+  color:  red;
+  background-color: #99ff;
+}
