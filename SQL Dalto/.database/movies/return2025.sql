@@ -109,9 +109,28 @@ GROUP BY gen.genre
 SELECT genre, count(*) as 'numero de peliculas' FROM "IMDB" as IM
 INNER JOIN "genre" as gen on "IM"."Movie_id" = "gen"."Movie_id"
 WHERE "Rating" > 8
-GROUP BY genre
+GROUP BY genre;
+
+
+-- * ¿Qué porcentaje de las películas recuperan su inversión inicial (es decir, la recaudación mundial es mayor al presupuesto)?
+
+SELECT  count(*) as "Cantidad de Peliculas con Beneficios" FROM "IMDB" as IM
+LEFT JOIN earning as ear ON IM."Movie_id" = ear."Movie_id" 
+WHERE ear."Worldwide" > IM."Budget";
+
+
+--* ¿Cuáles son las películas que tienen un rating superior al promedio de rating de todas las películas?
+
+SELECT title, "Rating" FROM "IMDB"
+WHERE "Rating" > (SELECT AVG("Rating") FROM "IMDB");
 
 
 
+-- * ¿Cuál es la posición de cada película en términos de recaudación mundial dentro de su género?
 
-
+SELECT title FROM "IMDB" as IM
+LEFT JOIN earning as ear on IM."Movie_id" = ear."Movie_id"
+LEFT JOIN genre as gen on  "IM"."Movie_id" = gen."Movie_id"
+WHERE gen.genre = 'Action'
+ORDER BY ear."Worldwide" DESC;
+-- * ¿Cuál es la posición de cada película en términos de recaudación mundial dentro de su género?
