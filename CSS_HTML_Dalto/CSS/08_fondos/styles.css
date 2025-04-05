@@ -1,8 +1,8 @@
-body {
-  background-color: green;
-}
-
-.box {
+/* body {
+  background-color: transparent;
+} */
+/** Fondos */
+.fondo {
   width:200px;
   height: 200px;
   margin: 20px;
@@ -12,4 +12,62 @@ body {
   background-position: bottom; /* Este sirve para que la imagen se posicione en el centro del contenedor(right, left, top, botton */
   background-repeat: no-repeat; /* Este sirve para que la imagen no se repita */
   background-attachment: fixed; /* Este sirve para que la imagen no se mueva al hacer scroll */
+  /* background: ;   Para poner todo lo demas en una sola linea*/
+  margin-bottom: 20%;
+}
+
+/** Gradientes
+Es como una transicion de un color, aumento o disminucion */
+
+.gradiente_1 {
+  width: 400px;
+  height: 200px;
+  background: linear-gradient(to right, red, yellow, green); /* Este sirve para hacer un gradiente de un color a otro pero podemos poner mas colores */
+  margin-bottom: 20%;
+}
+
+.gradiente_2 {
+  width: 400px;
+  height: 200px;
+  background: radial-gradient(blue, red) ; /*Explicacion: De un color a otro pero en forma radial */
+  margin-bottom: 20%;
+}
+
+.gradiente_3 {
+  width: 400px;
+  height: 200px;
+  background: conic-gradient( yellow, green); /*Explicacion: De un color a otro pero en forma circular */
+  margin-bottom: 20%;
+} 
+
+/** Sombras*/
+.sombras_1 {
+  width: 200px;
+  height: 100px;
+  background:#e2e2e2;
+  margin: auto;
+  margin-top: 20%;
+  box-shadow:50px, 20px, 40px, 40px, black; /* Este sirve para poner sombras en los elementos, cada posicion significa:  */
+  /* 1. Posicion de la sombra en x */
+  /* 2. Posicion de la sombra en y */
+  /* 3. Desenfoque */
+  /* 4. Extension */
+  /* 5. Color */
+}
+p {
+  text-shadow: 0, 0, 4px, red; /* Este sirve para poner sombras en el texto, cada posicion significa:  */
+  /* 1. Posicion de la sombra en x */
+  /* 2. Posicion de la sombra en y */
+  /* 3. Desenfoque */
+  /* 4. Color */
+  text-align: center;
+}
+#image {
+  width: 100px;
+  height: 80px;
+  filter: drop-shadow(8px, 8px, 10px, red); /* Este sirve para poner sombras en las imagenes, cada posicion significa:  */
+  /* 1. Posicion de la sombra en x */
+  /* 2. Posicion de la sombra en y */
+  /* 3. Desenfoque */
+  /* 4. Color */
 }

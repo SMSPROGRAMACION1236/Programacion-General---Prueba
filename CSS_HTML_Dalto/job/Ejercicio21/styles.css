@@ -1,0 +1,47 @@
+
+body {
+  width: 100%;
+  height: 100% ;
+  border-width: 10px;
+  border-color: #ffe;
+  border-style: dotted;
+  box-sizing: content-box;
+  background: linear-gradient(to bottom, green, transparent);
+  padding: 20px;
+}
+span {
+  font-weight: bold ;
+}
+h2 {
+  text-align: center;
+  color: rgb(20, 12, 44);
+  background-color: #1134;
+}
+h3 {
+  text-align: center;
+  color: rgb(20, 12, 44);
+  background-color: #1134;
+}
+
+.intro {
+  width: 100%;
+  height:100%;
+  text-align: justify;
+  font-family: 'Courier New', Courier, monospace;
+  font-variant: inherit;
+}
+.concepto {
+  text-align: justify;
+  font-family: 'Courier New', Courier, monospace;
+  font-variant: inherit;
+}
+.caracteristicas {
+  text-align: justify;
+  font-family: 'Courier New', Courier, monospace;
+  font-variant: inherit;
+}
+.conclusion {
+  text-align: justify;
+  font-family: 'Courier New', Courier, monospace;
+  font-variant: inherit;
+}
