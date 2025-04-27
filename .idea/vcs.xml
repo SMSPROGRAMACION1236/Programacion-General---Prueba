@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Docker/Curso HolaMundo/mongoapp-curso-docker" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Docker/mongoapp-curso-docker" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Hello Python/Curso de Mongo Python" vcs="Git" />
+  </component>
+</project>

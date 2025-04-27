@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9d08fcb4-8bc6-4f42-a838-cfc606734e5e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Docker/Curso HolaMundo/mongoapp-curso-docker" beforeDir="false" afterPath="$PROJECT_DIR$/Docker/Curso HolaMundo/mongoapp-curso-docker" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docker/Curso HolaMundo/mongoapp-curso-docker/Resume.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docker/Curso HolaMundo/mongoapp-curso-docker/Resume.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docker/mongoapp-curso-docker" beforeDir="false" afterPath="$PROJECT_DIR$/Docker/mongoapp-curso-docker" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docker/mongoapp-curso-docker/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Docker/mongoapp-curso-docker/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docker/mongoapp-curso-docker/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Docker/mongoapp-curso-docker/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hello Python/Curso Tkinter/35_manejo_archivos.py" beforeDir="false" afterPath="$PROJECT_DIR$/Hello Python/Curso Tkinter/35_manejo_archivos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hello Python/Curso Tkinter/37_guardar.py" beforeDir="false" afterPath="$PROJECT_DIR$/Hello Python/Curso Tkinter/37_guardar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hello Python/Curso Tkinter/38_ejemplo_guardar.py" beforeDir="false" afterPath="$PROJECT_DIR$/Hello Python/Curso Tkinter/38_ejemplo_guardar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hello Python/Curso Tkinter/39_lista_archivos.py" beforeDir="false" afterPath="$PROJECT_DIR$/Hello Python/Curso Tkinter/39_lista_archivos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hello Python/Curso Tkinter/pruevaVSCode.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Hello Python/Curso Tkinter/pruevaVSCode.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hello Python/Mouredev/Solid Principles/better_poo.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Hello Python/Mouredev/Solid Principles/better_poo.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hello Python/Other/job/args_kargs.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Hello Python/Other/job/args_kargs.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hello Python/Other/job/raise_Exer.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Hello Python/Other/job/raise_Exer.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hello Python/Python_Poo_Dalto/POO Exercises/classes.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Hello Python/Python_Poo_Dalto/POO Exercises/classes.ipynb" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Hello Python/Curso de Mongo Python" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2u2hgjlIb4rq1Wt30gJLpFWRWHi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/santi/Programación/Proyectos/PyVend",
+    "settings.editor.selected.configurable": "terminal"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9d08fcb4-8bc6-4f42-a838-cfc606734e5e" name="Changes" comment="" />
+      <created>1741452690287</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1741452690287</updated>
+    </task>
+    <servers />
+  </component>
+</project>

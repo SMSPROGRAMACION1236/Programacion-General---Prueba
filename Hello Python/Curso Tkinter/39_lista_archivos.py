@@ -1,31 +1,24 @@
 import tkinter as tk
 from tkinter import filedialog
-from icecream import ic
+import os
+
+def seleccionar_directorio():
+  dir_path = filedialog.askdirectory()  # Seleccionar un directorio y obtener su ruta absoluta
+  if dir_path:
+    list_box.delete(0, tk.END)  # Limpiar la lista antes de mostrar los archivos
+    for archivo in os.listdir(dir_path):
+      list_box.insert(tk.END, archivo)
 
 
 ventana = tk.Tk()
-
-ventana.withdraw() # Ocultar ventana principal
-#* Para solo un archivo a la vez
-# file_path =  filedialog.askopenfilename() # Sirve para seleccionar un archivo y obtener su ruta absoluta
-# ic(file_path)
-
-#* Para muchos archivos a la vez
-# files_path = filedialog.askopenfilenames() # Sirve para seleccionar varios archivos y obtener sus rutas absolutas
-# ic(files_path)
-
-#* Para abrir un archivo y leer su contenido
-file_obj =  filedialog.askopenfile(mode="r")
-if file_obj:
-  ic(file_obj.read())
-  file_obj.close()
+ventana.title("Navegador de Archivos")
 
 
-# file_paths = filedialog.askopenfilenames()
-# ic(file_paths)
+list_box = tk.Listbox(ventana)  # Crear un Listbox para mostrar los archivos
+list_box.pack(expand=True, fill="both")  # Empaquetar el Listbox en la ventana
 
-# file_obj = filedialog.askopenfiles(mode="r")
-# if file_obj:
-#   ic(file_obj.read())
-#   file_obj.close()
 
+seleccionar_button = tk.Button(ventana, text="Seleccionar Directorio", command=seleccionar_directorio)  # Crear un botón para seleccionar un directorio
+seleccionar_button.pack()  # Empaquetar el botón en la ventana
+
+ventana.mainloop()  # Iniciar el bucle principal de la ventana

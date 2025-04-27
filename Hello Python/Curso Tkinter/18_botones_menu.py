@@ -1,7 +1,7 @@
 import tkinter as tk
 
 ventana = tk.Tk()
-
+ventana.geometry("300x200")
 
 menubotton = tk.Menubutton(ventana, text="Archivo") # Le aplicamos ala ventana principal
 menubotton.pack()
