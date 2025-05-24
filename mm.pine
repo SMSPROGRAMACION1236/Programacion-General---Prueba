@@ -1,0 +1,21 @@
+
+//@version=5
+strategy("Estrategias de Medias Moviles", overlay = true)
+
+
+sma50 = ta.sma(close, 50)  // Explicacion: Esta es la media movil simple de 50 periodos
+
+
+sma200 = ta.sma(close, 200) // Explicacion: Esta es la media movil simple de 200 periodos
+
+
+buy_cond = ta.crossover(sma50, sma200) // Explicacion: Esta es la condicion de compra, cuando la media movil de 50 cruza por encima de la de 200
+sell_cond = ta.crossunder(sma50, sma200) // Explicacion: Esta es la condicion de venta, cuando la media movil de 50 cruza por debajo de la de 200
+
+
+strategy.entry("Buy", strategy.long, when = buy_cond) // Explicacion: Esta es la orden de compra cuando se cumple la condicion de compra
+strategy.entry("Sell", strategy.short, when = sell_cond) // Explicacion: Esta es la orden de venta cuando se cumple la condicion de venta
+
+
+plot(sma50, color=color.blue, title="SMA 50") // Explicacion: Esta es la media movil de 50 periodos en color azul
+plot(sma200, color=color.white, title="SMA 200") // Explicacion: Esta es la media movil de 200 periodos en color rojo
