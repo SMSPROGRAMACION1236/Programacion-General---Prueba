@@ -133,4 +133,9 @@ LEFT JOIN earning as ear on IM."Movie_id" = ear."Movie_id"
 LEFT JOIN genre as gen on  "IM"."Movie_id" = gen."Movie_id"
 WHERE gen.genre = 'Action'
 ORDER BY ear."Worldwide" DESC;
--- * ¿Cuál es la posición de cada película en términos de recaudación mundial dentro de su género?
+-- * Obtén una lista de todos los géneros de películas que existen en la tabla genre, junto con los ratings de las películas que tienen un rating mayor a 9 de la tabla IMDB.
+
+SELECT  genre FROM genre
+UNION ALL
+SELECT Rating FROM "IMDB"
+WHERE "Rating" > 9;
