@@ -25,7 +25,7 @@ form {
   padding: 10px 20px;
 }
 
-input, textarea { 
+input, textarea, select { 
   min-width: 100%; /* Explicacion: min-width sirve para que el elemento no se haga más pequeño que el tamaño mínimo especificado. */
   box-sizing: border-box;  /* Explicacion: Sirve para que el padding y el border se incluyan en el ancho y alto total del elemento. */
   border: none; /* Explicacion: Sirve para quitar el borde del elemento. */

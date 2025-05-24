@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TexArea</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!--* Conceptos-->
+  <!--* Select: is an element that allows us to select an option from a list, it is a form element.-->
+  <!--* Datalist: is an element that allows us to create a list of options for an input, but it is not a form element.-->
+  <!--* Option: is an element used within a select or a datalist to define an option.-->
+  <form>
+    <h2>Formulario de Contacto</h2>
+    <div class="form_input">
+      <input name="nombre" placeholder="nombre completo">
+    </div>
+    <div class="form_input">
+      <input type="email" name="email" placeholder="Email Completo">
+    </div>
+    <div class="form_input">
+      <textarea >hola</textarea> <!-- readonly prevents editing, disable prevents focusing, they are also for the maximum number of characters, etc. -->
+    </div>
+    <!--* Select & Option-->
+    <div class="form_input">
+      <label for="opciones">Select an option</label>
+      <select name="opciones" id="opciones">
+        <option value="user_1">Option 1</option>
+        <option value="user_2">Option 2</option>
+        <option value="user_3">Option 3</option>
+    </div>
+    <!--* Datalist & Option-->
+    <div class="form_input">
+      <label for="options">Select an option</label>
+      <input list="datalist-options" name="options" id="options">
+      <datalist id="datalist-options">
+        <option value="Option 1"></option>
+        <option value="Option 2"></option>
+        <option value="Option 3"></option>
+      </datalist>
+    </div>
+
+
+  </form>
+</body>
+</html>

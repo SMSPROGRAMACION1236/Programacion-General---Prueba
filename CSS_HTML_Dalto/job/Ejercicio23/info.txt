@@ -1,0 +1,10 @@
+Crear un fondo lineal simple:
+
+Crea un div.
+Utiliza la propiedad background-image con la función linear-gradient() para crear un gradiente lineal de dos colores (por ejemplo, de azul a blanco).
+Experimenta cambiando los colores y la dirección del gradiente (por ejemplo, to right, to bottom left, con ángulos como 45deg).
+Crear un fondo radial simple:
+
+Crea otro div.
+Utiliza la propiedad background-image con la función radial-gradient() para crear un gradiente radial de dos colores (por ejemplo, de verde a amarillo).
+Experimenta con diferentes formas (por defecto es ellipse) y posiciones del centro del gradiente.

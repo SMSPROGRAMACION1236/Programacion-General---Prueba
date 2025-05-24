@@ -1,0 +1,13 @@
+.primer_gradiente {
+  margin: 10px;
+  height: 100px;
+  width: 100px;
+  background: linear-gradient(red, blue);
+}
+.segundo_gradiente {
+  margin: 10px;
+  height: 100px;
+  width: 100px;
+  background: conic-gradient(red, blue);
+  border: auto;
+}

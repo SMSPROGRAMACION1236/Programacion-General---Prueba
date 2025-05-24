@@ -1,13 +1,14 @@
 
 body {
-  width: 100%;
+  width: 99%;
   height: 100% ;
   border-width: 10px;
   border-color: #ffe;
   border-style: dotted;
-  box-sizing: content-box;
+  box-sizing:border-box ;
   background: linear-gradient(to bottom, green, transparent);
   padding: 20px;
+  box-sizing: border-box;
 }
 span {
   font-weight: bold ;
@@ -17,7 +18,7 @@ h2 {
   color: rgb(20, 12, 44);
   background-color: #1134;
 }
-h3 {
+h3 {  
   text-align: center;
   color: rgb(20, 12, 44);
   background-color: #1134;
@@ -31,6 +32,8 @@ h3 {
   font-variant: inherit;
 }
 .concepto {
+  width: 80rem;
+  height: 10rem;
   text-align: justify;
   font-family: 'Courier New', Courier, monospace;
   font-variant: inherit;

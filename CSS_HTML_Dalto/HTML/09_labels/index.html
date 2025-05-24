@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Labels</title>
+  <!--Los labels es una forma de etiquetar un elemento tipo input-->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <form>
+    <h2>Formulario de Contacto</h2>
+    <div class="form_input">
+      <label for="nombre" >Nombre </label>
+      <input name="nombre" placeholder="nombre completo" id="nombre"> <!-- el for del label tiene que ser igual al id del input, para que funcione el label -->
+    </div>
+    <div class="form_input">
+      <label for="email">Email </label>
+      <input type="email" name="email" placeholder="Email Completo" id="email"> <!-- el for del label tiene que ser igual al id del input, para que funcione el label -->
+    </div>
+    <div class="form_input">
+      <textarea >hola</textarea> <!-- readonly es para que no nos permita editar, disable para que no nos permita ni enfocar, estan tambien para el maximo de caracteres, etc  -->
+  </form>
+</body>
+</html>

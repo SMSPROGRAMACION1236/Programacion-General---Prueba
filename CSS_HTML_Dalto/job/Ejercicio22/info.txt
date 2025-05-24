@@ -1,0 +1,10 @@
+Cambiar el fondo de un encabezado:
+
+Crea un encabezado (<h1>).
+Utiliza la propiedad background-color para darle un color de fondo simple.
+Practica con diferentes nombres de colores, valores hexadecimales y RGB.
+Agregar una imagen de fondo a un div:
+
+Crea un div con un ancho y alto definidos.
+Utiliza la propiedad background-image y la función url() para agregar una imagen de fondo (puedes usar cualquier imagen sencilla que tengas o buscar una en línea).
+Experimenta con las propiedades background-repeat (para que la imagen no se repita), background-size: cover; (para que cubra todo el div), y background-position: center; (para centrar la imagen).

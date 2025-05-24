@@ -44,3 +44,8 @@ textarea{
   max-height: 300px; /* Explicacion: Sirve para que el elemento no se haga más grande que el tamaño máximo especificado. */
   resize: vertical; /* Explicacion: Permite cambiar el tamaño del textarea solo en la dirección vertical. */
 }
+
+label {
+font-size: 0.9em;
+line-height: 2;
+}
